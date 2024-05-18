@@ -1,1 +1,217 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header{
+    background-color: #faf8f8;
+    color: #24AB70;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .app-bar-logo{
+    display: flex;
+  }
+  
+  .app-bar-logo img{
+    width:100px;
+    height:auto;
+  }
+  
+  #navigasi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #navigasi ul li {
+    margin-right: 20px;
+  }
+  
+  #navigasi ul li a {
+    text-decoration: none;
+    color: #090909;
+    padding: 15px;
+    transition: background-color 0.3s; 
+    border-radius: 15px;
+  }
+  
+  #navigasi ul li a:hover{
+    background-color: #24AB70;
+    padding: 10px 25px;
+    border-radius: 5px;
+  }
+  
+  #hamburger{
+    display: none;
+  }
 
+  #mainContent{
+    margin: 25px;
+  }
+
+  #back {
+    background-color: #24AB70; /* Warna hijau */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px; /* Padding 10px atas/bawah, 20px kiri/kanan */
+    border: none; /* Hapus border */
+    border-radius: 5px; /* Buat sudut melengkung */
+    cursor: pointer; /* Ubah kursor menjadi tangan saat diarahkan */
+}
+
+#back:hover {
+    background-color: #45a049; /* Ubah warna tombol saat dihover */
+}
+
+.judul{
+    text-align: center;
+    color: #24AB70;
+}
+
+.developer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.anggota-developer{
+    background-color: #faf8f8;
+    padding: 40px;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.anggota-developer img {
+    border-radius: 50%;
+    width: 150px; /* Sesuaikan ukuran gambar */
+    height: 150px; /* Sesuaikan ukuran gambar */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 10px;
+}
+.github img {
+    width: 24px; /* Sesuaikan ukuran ikon GitHub */
+    height: 24px; /* Sesuaikan ukuran ikon GitHub */
+    margin-right: 5px;
+}
+
+.visi-misi{
+    border: 1px solid #ccc; /* Garis tepi */
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.visi-misi-container{
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+footer{
+    background-color: #faf8f8;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: #090909;
+    font-size: medium;
+}
+
+footer .company-name h2{
+    color: #24AB70;
+}
+
+
+.skip-link {
+    position: absolute;
+    top: -44px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+   
+  .skip-link:focus {
+     top: 0;
+  }
+
+  @media screen and (max-width: 768px){
+    .developer-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+  }
+  
+  @media screen and (max-width: 576px){
+    #navigasi ul{
+      position: absolute;
+      left: 0;
+      flex-direction: column;
+      background-color: #111;
+      top:0;
+      height: 100vh;
+      width: 60%;
+      justify-content: space-evenly;
+      transform: translateX(-100%);
+      transition: all 1s;
+    }
+  
+    #navigasi ul.open{
+      transform: translateX(0);
+    }
+
+    
+    #hamburger {
+      font-size: 32px;
+      text-decoration: none;
+      color: white;
+      background-color: #333;
+      padding: 5px 10px;
+      display: block;
+      margin: 10px;
+    }
+
+    .developer-container{
+        grid-template-columns: 1fr;
+    }
+
+    .visi-misi-container{
+        grid-template-columns: 1fr;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+  
+  }
