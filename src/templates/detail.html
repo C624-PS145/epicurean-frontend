@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src\public\images\logo\logo.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="detail.css" rel="stylesheet" />
+    <title>Detail</title>
+  </head>
+  <body>
+    <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+    <header>
+      <div class="app-bar-logo">
+          <img src="logo.png" alt="Logo Epicurean Madura">
+          <h1>Epicurean Madura</h1>
+      </div>
+      <nav id="navigasi">
+        <ul>
+          <li><a href="#/home" >Home</a></li>
+          <li><a href="#/kuliner">Kuliner</a></li>
+          <li><a href="#/about">About</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="hamburger" aria-label="Toggle Menu">☰</button>
+    </header>
+    <main id="mainContent">
+        <button type="button" id="back" aria-label="Tombol Back"> <=Kembali</button>
+        <div class="judul">
+            <h1>Detail Kuliner</h1>
+        </div>
+        <div class="deskripsi">
+            <section class="gambar-restaurant">
+                <img src="bebeksinjai.jpg" alt="Gambar Restaurant">
+            </section>
+            <section class="identitas-restaurant">
+                <div class="nama-restaurant">
+                    <h2>Bebek Sinjai Tretan</h2>
+                </div>
+                <div class="alamat-restaurant">
+                    <p>Alamat : Jl. Telang indah gang asri no 21 kec. kamal</p>
+                </div>
+                <div class="kabuapten-restaurant">
+                    <p>Kabupaten : Bangkalan</p>
+                </div>
+                <div class="rating-restaurant">
+                    <p>Rating : 4.8</p>
+                </div>
+                <div class="keterangan-restaurant">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="no-hp-restaurant">
+                    <p>Informasi pemesanan : 0867328378237</p>
+                </div>
+                <div class="jam-operasional">
+                    <p>Jam Operasional : Buka 08.00-21.00</p>
+                </div>
+                <div class="lokasi-gmaps">
+                    <p>Lokasi Google Maps : </p>
+                    <img src="maps.png" alt="Gmaps restaurant">
+                </div>
+            </section>
+        </div>
+        <div class="daftar-menu">
+            <h2>Daftar Menu</h2>
+            <div class="daftar-menu-container">
+                    <div class="makanan">
+                        <h2>Makanan</h2>
+                        <div class="daftar-makanan">
+                            <ul>
+                                <li><span class="menu">BEBEK GORENG SINJAY KREMES</span> <span class="harga">Rp. 43.000</span></li>
+                                <li><span class="menu">SPESIAL SAMBAL PENCIT</span> <span class="harga">Rp. 32.000</span></li>
+                                <li><span class="menu">Bebek Sinjay Madura 1 Potong</span> <span class="harga">Rp. 45.000</span></li>
+                                <li><span class="menu">Nasi dan ayam goreng</span> <span class="harga">Rp. 20.000</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="minuman">
+                        <h2>Makanan</h2>
+                        <div class="daftar-minuman">
+                            <ul>
+                                <li><span class="menu">Es Teh</span> <span class="harga">Rp. 4.000</span></li>
+                                <li><span class="menu">Es Jeruk</span> <span class="harga">Rp. 5.000</span></li>
+                                <li><span class="menu">Es Degan</span> <span class="harga">Rp. 8.000</span></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="fasilitas">
+            <h2>Fasilitas</h2>
+            <div class="daftar-fasilitas">
+                <ul>
+                    <li>Free Wifi</li>
+                    <li>Parkir Luas</li>
+                    <li>Gazebo</li>
+                    <li>Toilet</li>
+                    <li>Area Merokok dan NON Merokok</li>
+                </ul>
+            </div>
+        </div>
+        <div class="galeri">
+            <h2>Galeri</h2>
+            <div class="galeri-container">
+                <img src="galeri1.jpg" alt="Galeri1">
+                <img src="galeri2.jpg" alt="Galeri2">
+                <img src="galeri3.jpg" alt="Galeri3">
+            </div>
+        </div>
+        <div class="form-review">
+            <h2>Form Review</h2>
+            <form class="form-review-container" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Masukkan Nama</label>
+                    <input type="text" id="name" name="name" placeholder="example Yohan Permana" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Masukkan Rating (1-5)</label>
+                    <select id="rating" name="rating" required>
+                        <option value="" disabled selected>Pilih rating</option>
+                        <option value="1">1 - Sangat Buruk</option>
+                        <option value="2">2 - Buruk</option>
+                        <option value="3">3 - Biasa Saja</option>
+                        <option value="4">4 - Baik</option>
+                        <option value="5">5 - Sangat Baik</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="review">Masukkan Review Anda</label>
+                    <textarea id="review" name="review" rows="4" placeholder="example Tempatnya bersih dan makanannya enak" required></textarea>
+                </div>
+            </form>
+            <div class="form-group">
+                <button type="submit">Kirim</button>
+            </div>
+        </div>
+        <div class="daftar-review">
+            <h2>Daftar Review</h2>
+            <div class="review-container">
+                <div class="review">
+                    <div class="review-header">
+                        <span class="review-name">Yohan Permana</span> <span class="review-rating">(5)</span>
+                    </div>
+                    <div class="review-body">
+                        <h3>Tempatnya bersih, makanannya enak</h3>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="review-name">Yohan Permana</span> <span class="review-rating">(5)</span>
+                    </div>
+                    <div class="review-body">
+                        <h3>Tempatnya bersih, makanannya enak</h3>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="review-name">Yohan Permana</span> <span class="review-rating">(5)</span>
+                    </div>
+                    <div class="review-body">
+                        <h3>Tempatnya bersih, makanannya enak</h3>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="review-name">Yohan Permana</span> <span class="review-rating">(5)</span>
+                    </div>
+                    <div class="review-body">
+                        <h3>Tempatnya bersih, makanannya enak</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        
+            <div class="company-name">
+                <h2>Epicurean Madura</h2>
+                <p>Jelajahi Kuliner Madura</p>
+            </div>
+            <div class="home-footer">
+                <h2><a href="#home">Home</a></h2>
+                <p><a href="#explore">Explore</a></p>
+                <p><a href="#wisata-kuliner-populer">Wisata Kuliner Populer</a></p>
+                <p><a href="#testimoni">Testimoni</a></p>
+                <p><a href="#about-madura">About Madura</a></p>
+            </div>
+            <div class="kuliner-footer">
+                <h2><a href="#kuliner">Kuliner</a></h2>
+                <p><a href="#daftar-kuliner">Daftar Kuliner</a></p>
+            </div>
+            <div class="about-footer">
+                <h2><a href="#about">About</a></h2>
+                <p><a href="#profile-developer">Profile Developer</a></p>
+                <p><a href="#visi-misi">Visi Misi</a></p>
+            </div>
+        
+    </footer>
+
+    
+  </body>
+</html>
 
