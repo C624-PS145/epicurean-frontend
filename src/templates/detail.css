@@ -1,1 +1,304 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header{
+    background-color: #faf8f8;
+    color: #24AB70;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .app-bar-logo{
+    display: flex;
+  }
+  
+  .app-bar-logo img{
+    width:100px;
+    height:auto;
+  }
+  
+  #navigasi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #navigasi ul li {
+    margin-right: 20px;
+  }
+  
+  #navigasi ul li a {
+    text-decoration: none;
+    color: #090909;
+    padding: 15px;
+    transition: background-color 0.3s; 
+    border-radius: 15px;
+  }
+  
+  #navigasi ul li a:hover{
+    background-color: #24AB70;
+    padding: 10px 25px;
+    border-radius: 5px;
+  }
+  
+  #hamburger{
+    display: none;
+  }
 
+  #mainContent{
+    margin: 25px;
+  }
+
+  #back {
+    background-color: #24AB70; /* Warna hijau */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px; /* Padding 10px atas/bawah, 20px kiri/kanan */
+    border: none; /* Hapus border */
+    border-radius: 5px; /* Buat sudut melengkung */
+    cursor: pointer; /* Ubah kursor menjadi tangan saat diarahkan */
+}
+
+#back:hover {
+    background-color: #45a049; /* Ubah warna tombol saat dihover */
+}
+
+.judul{
+    text-align: center;
+    color: #24AB70;
+}
+
+.deskripsi {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Dua kolom dengan lebar yang sama */
+    grid-gap: 20px; /* Jarak antara kolom */
+}
+
+.gambar-restaurant img {
+    width: 100%; /* Gambar tidak melebihi lebar kontainer */
+    height: auto; /* Biarkan proporsi asli gambar */
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.identitas-restaurant p {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.lokasi-gmaps img{
+    width: 50%;
+}
+
+.daftar-menu-container {
+    background-color: #eaf2f8; /* Warna biru muda */
+    padding: 20px; /* Padding */
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.daftar-makanan li,
+.daftar-minuman li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5px;
+}
+
+.daftar-fasilitas {
+    background-color: #eaf2f8; /* Warna biru muda */
+    padding: 20px; /* Padding */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.daftar-fasilitas ul {
+    list-style-type: none; /* Menghilangkan tanda bullet */
+    padding: 0; /* Menghilangkan padding default */
+    display: flex; /* Susunan menyamping */
+    flex-wrap: wrap; /* Pindah baris jika tidak muat */
+}
+
+.daftar-fasilitas li {
+    margin-right: 40px; /* Jarak antar fasilitas */
+    margin-bottom: 10px; /* Jarak antar baris */
+}
+
+.galeri-container {
+    display: flex;
+    gap: 20px; /* Jarak antara gambar */
+}
+
+.galeri-container img {
+    max-width: 100%; /* Ukuran maksimum gambar */
+    height: auto; /* Biarkan proporsi asli gambar */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.form-review {
+    max-width: 500px; /* Lebar maksimum form */
+}
+
+.form-review-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Jarak antara setiap form-group */
+    gap: 10px; /* Jarak antara kolom */
+}
+
+label {
+    display: block; /* Atur label sebagai blok untuk memisahinya dengan input */
+    margin-bottom: 5px; /* Jarak antara label dan input */
+}
+
+input[type="text"],
+select,
+textarea {
+    width:100%;
+    padding: 10px; /* Padding */
+    border: 1px solid #ccc; /* Garis tepi */
+    border-radius: 5px; /* Sudut melengkung */
+    box-sizing: border-box; /* Lebar input termasuk padding dan border */
+}
+
+#review {
+    width:200%;
+    resize: vertical; /* Biarkan textarea dapat diubah ukurannya secara vertikal */
+}
+
+button[type="submit"] {
+    background-color: #24AB70; /* Warna hijau */
+    color: white; /* Warna teks putih */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Hapus border */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Ubah kursor menjadi tangan saat diarahkan */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Ubah warna tombol saat dihover */
+}
+
+.review-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom dengan lebar yang sama */
+    gap: 20px; /* Jarak antara kolom */
+}
+
+.review{
+    padding: 10px; /* Padding */
+    border-radius: 5px; /* Sudut melengkung */
+    border: 1px solid #ccc; /* Garis tepi */
+}
+
+footer{
+    background-color: #faf8f8;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: #090909;
+    font-size: medium;
+}
+
+footer .company-name h2{
+    color: #24AB70;
+}
+
+
+.skip-link {
+    position: absolute;
+    top: -44px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+   
+  .skip-link:focus {
+     top: 0;
+  }
+
+  @media screen and (max-width: 768px){
+    .galeri-container {
+        display: flex;
+        gap: 20px; /* Jarak antara gambar */
+        flex-wrap: wrap;
+    }
+
+    .footer-container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+  }
+  
+  @media screen and (max-width: 576px){
+    #navigasi ul{
+      position: absolute;
+      left: 0;
+      flex-direction: column;
+      background-color: #111;
+      top:0;
+      height: 100vh;
+      width: 60%;
+      justify-content: space-evenly;
+      transform: translateX(-100%);
+      transition: all 1s;
+    }
+  
+    #navigasi ul.open{
+      transform: translateX(0);
+    }
+
+    
+    #hamburger {
+      font-size: 32px;
+      text-decoration: none;
+      color: white;
+      background-color: #333;
+      padding: 5px 10px;
+      display: block;
+      margin: 10px;
+    }
+
+    .deskripsi {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .daftar-menu-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .lokasi-gmaps img{
+        width: 100%;
+    }
+
+    #review {
+        width:150%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+  
+  }
