@@ -1,0 +1,323 @@
+$txt: #353535;
+$pc: #24AB70;
+$txt2:#000000;
+$w:#ffff;
+$bgl:#FAFAFA;
+$jlt : #222222;
+$ds: #555555;
+$bva:#E9F7F1;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  a{
+    text-decoration: none;
+    color: $txt2;
+  }
+
+  header {
+    display: flex;
+    max-width: 1440px;
+    width: 90%;
+    justify-content: space-between;
+    padding-top: 30px;
+    img{
+      max-width: 300px;
+      margin-right: 5%;
+    }
+    align-items:center ;
+
+    nav{
+      ul{
+        display: flex;
+        list-style: none;
+        li{
+          a{
+            padding: 20px;
+            font-size: 20px;
+            &:hover {
+              color: $pc;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // !jumbotron
+
+  .jumbotron {
+    margin: 0% 5% 0% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    section{
+      h1{
+        font-size: 42px;
+        font-weight: 600;
+        color: $txt;
+        span{
+          color: $pc;
+        }
+      }
+      p{
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight:300;
+        color: $txt;
+      }
+      button{
+        padding: 10px;
+        border-radius: 10px;
+        width: 165px;
+        height: 50px;
+        background-color: $pc;
+        color: $w;
+        font-size: 18px;
+        border: none;
+        margin-top: 30px;
+        &:hover {
+          background-color: $txt; 
+        }
+        cursor: pointer;
+      }
+    }
+    figure{
+      img{
+        max-width: 540px;
+      }
+    }
+  }
+
+  // !Label
+  
+  .label{
+    margin-bottom: 50px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 95%;
+    
+    h2{
+      font-size: 40px;
+      font-weight: 600;
+      color: $txt;
+    }
+    p{
+      color: $ds;
+      margin-top: 10px;
+    }
+    button{
+      font-size: 16px;
+      width: 109px;
+      height: 40px;
+      border-radius: 280px;
+      border: none;
+      background-color: $bva;
+      color: $pc;
+      cursor: pointer;
+      &:hover {
+        background-color: $txt; 
+      }
+
+    }
+  }
+
+  .populer{
+    .list-item{
+      margin-top: 70px;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: auto auto auto;
+      article{
+        border-radius: 16px;
+        background-color: $bgl;
+        padding: 30px;
+        max-width: 411px;
+        display: flex;
+        flex-direction: column;
+        img{
+          max-width: 346px;
+          height: 207px;
+          object-fit: cover;
+          border-radius: 16px;
+          margin-bottom: 10px;
+        }
+        .lok{
+          color: $pc;
+        }
+        
+        h3{
+          a{
+            font-size: 24px;
+            font-weight:600;
+            color: $jlt;
+          }
+        }
+        section{
+          margin-top: 10px;
+          p{
+            color:$ds;
+            text-align: justify;
+          }
+          div{
+            display: flex;
+            justify-content: end;
+            margin-top: 20px;
+            button{
+              text-align: center;
+              margin-top: 15px;
+              font-size: 16px;
+              color: $w;
+              background: $pc;
+              border: none;
+              padding-left: 10px;
+              padding-right: 5px;
+              padding-bottom: 3px;
+              border-radius: 35px;
+              width: 90px;
+              span{
+                font-size: 24px;
+              }
+              &:hover {
+                background-color: $txt; 
+              }
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimoni{
+    .label{
+      justify-content: end;
+      text-align: end;
+    }
+    .list-item2{
+      display: grid;
+      gap: 30px;
+      grid-template-columns: auto auto auto;
+      article{
+        border-radius: 16px;
+        background-color: $bgl;
+        padding: 30px;
+        max-width: 411px;
+        display: flex;
+        flex-direction: column;
+        img{
+          max-width: 346px;
+          height: 207px;
+          object-fit: cover;
+          border-radius: 16px;
+          margin-bottom: 10px;
+        }
+        
+        h3{
+          a{
+            font-size: 24px;
+            font-weight:600;
+            color: $jlt;
+          }
+        }
+        section{
+          margin-top: 10px;
+          h4{
+            font-size: 15px;
+            color: $jlt;
+            font-weight:600;
+          }
+          p{
+            color: $jlt;
+          }
+          span{
+            p{
+              margin-top: 10px;
+              border-top: 1.5px solid $jlt;
+              color:$ds;
+              text-align: justify;
+              
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+
+  .aboutmadura{
+    width: 95%;
+    .label{
+      justify-content: center;
+    }
+    article{
+      border-radius: 16px;
+      max-height: 400px;
+      background-color: $bgl;
+      div{
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        section{
+          padding: 50px;
+          padding-left: 100px;
+          max-width: 730px;
+          p{
+            font-size: 16px;
+            color: $ds;
+            text-align: justify;
+           
+          }
+      
+          h3{
+            margin-top: 20px;
+            font-size: 24px;
+            color: $jlt;
+            font-weight: 500;
+          }
+        }
+        figure{
+          img{
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            object-fit: cover;
+            max-width: 400px;
+            height: 400px;
+          }
+        }
+        
+        
+      }
+    }
+    
+  }
+
+
+
+
+  
+  main{
+    margin-bottom: 900px;
+    max-width: 1440px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+  
