@@ -8,8 +8,8 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     static: path.resolve(__dirname, 'dist'),
-    open: true,
-    port: 9002,
+    open: false,
+    port: 9007,
     client: {
       overlay: {
         errors: true,
