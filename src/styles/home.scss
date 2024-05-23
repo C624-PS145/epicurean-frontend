@@ -6,7 +6,7 @@ $bgl:#FAFAFA;
 $jlt : #222222;
 $ds: #555555;
 $bva:#E9F7F1;
-
+$shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
 * {
     padding: 0;
     margin: 0;
@@ -39,6 +39,20 @@ $bva:#E9F7F1;
     align-items:center ;
 
     nav{
+      button{
+        font-size: 22px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: $pc;
+        color: $w;
+        box-shadow: $shadowbox;
+        &:hover {
+          background-color: $txt; 
+        }
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
       ul{
         display: flex;
         list-style: none;
@@ -49,6 +63,7 @@ $bva:#E9F7F1;
             &:hover {
               color: $pc;
             }
+            transition: color 0.3s ease;
           }
         }
       }
@@ -60,12 +75,11 @@ $bva:#E9F7F1;
   .jumbotron {
     margin: 0% 5% 0% 5%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     section{
       h1{
         font-size: 42px;
-        font-weight: 600;
         color: $txt;
         span{
           color: $pc;
@@ -91,11 +105,17 @@ $bva:#E9F7F1;
           background-color: $txt; 
         }
         cursor: pointer;
+        transition: background-color 0.3s ease;
       }
     }
     figure{
       img{
         max-width: 540px;
+        width: 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+      img:hover {
+        transform: scale(1.08);
       }
     }
   }
@@ -120,6 +140,7 @@ $bva:#E9F7F1;
       margin-top: 10px;
     }
     button{
+      margin-left: 100px;
       font-size: 16px;
       width: 109px;
       height: 40px;
@@ -131,6 +152,8 @@ $bva:#E9F7F1;
       &:hover {
         background-color: $txt; 
       }
+      transition: background-color 0.3s ease;
+      
 
     }
   }
@@ -142,6 +165,7 @@ $bva:#E9F7F1;
       gap: 30px;
       grid-template-columns: auto auto auto;
       article{
+        box-shadow: $shadowbox;
         border-radius: 16px;
         background-color: $bgl;
         padding: 30px;
@@ -150,10 +174,15 @@ $bva:#E9F7F1;
         flex-direction: column;
         img{
           max-width: 346px;
+          width: 100%;
           height: 207px;
           object-fit: cover;
           border-radius: 16px;
-          margin-bottom: 10px;
+          margin-bottom: 30px;
+          transition: transform 0.4s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
         }
         .lok{
           color: $pc;
@@ -195,6 +224,7 @@ $bva:#E9F7F1;
                 background-color: $txt; 
               }
               cursor: pointer;
+              transition: background-color 0.3s ease;
             }
           }
         }
@@ -212,6 +242,7 @@ $bva:#E9F7F1;
       gap: 30px;
       grid-template-columns: auto auto auto;
       article{
+        box-shadow: $shadowbox;
         border-radius: 16px;
         background-color: $bgl;
         padding: 30px;
@@ -219,11 +250,16 @@ $bva:#E9F7F1;
         display: flex;
         flex-direction: column;
         img{
+          width: 100%;
           max-width: 346px;
           height: 207px;
           object-fit: cover;
           border-radius: 16px;
-          margin-bottom: 10px;
+          margin-bottom: 30px;
+          transition: transform 0.4s ease-in-out;
+        }
+        img:hover {
+          transform: scale(1.05);
         }
         
         h3{
@@ -260,22 +296,26 @@ $bva:#E9F7F1;
 
 
   .aboutmadura{
-    width: 95%;
+    margin: 0% 5% 0% 5%;
     .label{
       justify-content: center;
     }
     article{
+      box-shadow: $shadowbox;
       border-radius: 16px;
-      max-height: 400px;
+      // max-height: 400px;
       background-color: $bgl;
       div{
-        justify-content: space-between;
-        align-items: center;
         display: flex;
+        justify-content: space-between;
+        // align-items: center;
         section{
           padding: 50px;
           padding-left: 100px;
           max-width: 730px;
+          div{
+            flex-direction: column;
+          }
           p{
             font-size: 16px;
             color: $ds;
@@ -292,12 +332,18 @@ $bva:#E9F7F1;
         }
         figure{
           img{
+            transition: transform 0.4s ease-in-out;
             border-top-right-radius: 16px;
             border-bottom-right-radius: 16px;
             object-fit: cover;
-            max-width: 400px;
+            // width:  100%;
             height: 400px;
+            max-width: 500px;
+            
           }
+          img:hover {
+            transform: scale(1.05);
+        }
         }
         
         
@@ -306,18 +352,267 @@ $bva:#E9F7F1;
     
   }
 
-
-
-
-  
   main{
     margin-bottom: 900px;
+    margin-top: 100px;
     max-width: 1440px;
     width: 90%;
     display: flex;
     flex-direction: column;
+  }
 
+  @media screen and (max-width: 1400px){
+    .jumbotron{
+      figure{
+        margin-top: 60px;
+      }
+    }
+    .populer{
+      .label{
+        justify-content: space-evenly;
+      }
+      .list-item{
+        grid-template-columns: auto auto;
+        justify-content: center;
+      }
+    }
+    .testimoni{
+      .label{
+        width: 87%;
+      }
+      .list-item2{
+        grid-template-columns: auto auto;
+        justify-content: center;
+
+      }
+    }
+    .aboutmadura{
+      article{
+        div{
+          section{
+            display: flex;
+            flex-direction: column-reverse;
+            div{
+              flex-direction: column;
+              margin-bottom: 30px;
+            }
+          }
+          align-items: center;
+          figure{
+            padding-right: 80px;
+            img{
+              max-width: 300px;
+              height: 250px; 
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  @media screen and (max-width: 1302px){
+    .jumbotron{
+      figure{
+        img{
+         width: 90%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 950px){
+    main{
+      width: 80%;
+    }
+    .aboutmadura{
+      article{
+        div{
+          section{
+            padding-left: 50px;
+          }
+          flex-direction: column;
+          figure{
+            display: none;
+          }
+        }
+      }
+    }
+
+    .populer{
+      .label{
+        margin-bottom: 0px;
+        button{
+          margin-top: 30px;
+        }
+      }
+      .list-item{
+        margin-top: 30px;
+      }
+    }
+    
+
+  }
+  @media screen and (min-width: 768px){
+    header{
+      nav{
+        button{
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px){
+    main{
+      margin-top: 70px;
+    }
+    header{
+      justify-content: space-between;
+      img{
+        width: 70%;
+      }
+      nav{
+        ul{
+          li{
+            display: none;
+          }
+        }
+      }
+    }
+    .jumbotron{
+      figure{
+        img{
+          width: 85%;
+        }
+      }
+      section{
+        h1{
+          font-size: 30px;
+        }
+        p{
+          font-size: 13px;
+        }
+        button{
+          width: 100px;
+          max-height: 35px;
+          font-size: 14px;
+        }
+      }
+      figure{
+        margin-top: 60px;
+      }
+    }
+
+    .label{
+      margin-top: 70px;
+      flex-direction: column;
+      align-items: center;
+      button{
+        margin-right: 100px;
+      }
+      section{
+        h2{
+          font-size: 28px;
+        }
+        p{
+          font-size: 13px;
+        }
+      }
+    }
+
+    .populer{
+      .list-item{
+        grid-template-columns: auto ;
+        gap: 70px;
+        article{
+          box-shadow: none;
+          h3{
+            a{
+              font-size: 20px;
+            }
+          }
+          p{
+            font-size: 12px;
+          }
+          section{
+            div{
+              button{
+                font-size: 13px;
+                span{
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .testimoni{
+      .label{
+        width: 100%;
+      }
+      .list-item2{
+        gap: 50px;
+        grid-template-columns: auto;
+        article{
+          box-shadow: none;
+          h3{
+            a{
+              font-size: 20px;
+            }
+          }
+          section{
+            span{
+              p{
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .aboutmadura{
+      article{
+        box-shadow: none;
+        div{
+          section{
+            padding-left: 50px;
+            p{
+              font-size: 13px;
+            }
+            div{
+              h3{
+                font-size: 16px;
+              }
+              p{
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
 
+
+
+
+
+
+
+
   
+
+  
+
+
+
+
+
+
+
+  // ! Responsive
+
+
