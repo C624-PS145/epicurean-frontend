@@ -2,7 +2,7 @@ import 'regenerator-runtime';
 import '../styles/home.scss';
 // eslint-disable-next-line import/extensions
 import App from './views/app';
-import swRegister from './utils/sw-register';
+// import swRegister from './utils/sw-register';
 
 const app = new App({
   button: document.querySelector('#menuToggle'),
@@ -18,5 +18,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', async () => {
   app.renderPage();
-  await swRegister();
+  // await swRegister();
 });

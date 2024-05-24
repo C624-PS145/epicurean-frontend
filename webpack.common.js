@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 // module export dan plugins
 module.exports = {
   entry: {
@@ -48,24 +48,24 @@ module.exports = {
         },
       ],
     }),
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './sw.bundle.js',
-      runtimeCaching: [
-        {
-          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'restoapicache',
-          },
-        },
-        {
-          urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/medium/'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'restoimagecache',
-          },
-        },
-      ],
-    }),
+    // new WorkboxWebpackPlugin.GenerateSW({
+    //   swDest: './sw.bundle.js',
+    //   runtimeCaching: [
+    //     {
+    //       urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/'),
+    //       handler: 'StaleWhileRevalidate',
+    //       options: {
+    //         cacheName: 'restoapicache',
+    //       },
+    //     },
+    //     {
+    //       urlPattern: ({ url }) => url.href.startsWith('https://restaurant-api.dicoding.dev/images/medium/'),
+    //       handler: 'StaleWhileRevalidate',
+    //       options: {
+    //         cacheName: 'restoimagecache',
+    //       },
+    //     },
+    //   ],
+    // }),
   ],
 };
