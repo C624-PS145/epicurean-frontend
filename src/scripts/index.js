@@ -3,6 +3,8 @@ import '../styles/home.scss';
 // eslint-disable-next-line import/extensions
 import App from './views/app';
 // import swRegister from './utils/sw-register';
+// eslint-disable-next-line import/extensions
+import './component/jumbotron.js';
 
 const app = new App({
   button: document.querySelector('#menuToggle'),
