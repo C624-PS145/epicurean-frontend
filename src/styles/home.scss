@@ -7,7 +7,7 @@ $jlt : #222222;
 $ds: #555555;
 $bva:#E9F7F1;
 $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -19,8 +19,17 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    overflow-x: hidden;
   }
+  main{
+    margin-bottom: 900px;
+    margin-top: 100px;
+    max-width: 1440px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
   a{
     text-decoration: none;
     color: $txt2;
@@ -61,7 +70,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
             padding: 20px;
             font-size: 20px;
             &:hover {
-              color: $pc;
+              color: $pc;;
             }
             transition: color 0.3s ease;
           }
@@ -69,8 +78,6 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
       }
     }
   }
-
-  // !jumbotron
 
   .jumbotron {
     margin: 0% 5% 0% 5%;
@@ -119,8 +126,6 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
       }
     }
   }
-
-  // !Label
   
   .label{
     margin-bottom: 50px;
@@ -352,14 +357,8 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
     
   }
 
-  main{
-    margin-bottom: 900px;
-    margin-top: 100px;
-    max-width: 1440px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-  }
+ 
+  // ! Code Responsif
 
   @media screen and (max-width: 1400px){
     .jumbotron{
@@ -420,7 +419,6 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
       }
     }
   }
-
   @media screen and (max-width: 950px){
     main{
       width: 80%;
@@ -453,7 +451,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
     
 
   }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 767px){
     header{
       nav{
         button{
@@ -463,11 +461,19 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
     }
   }
   @media screen and (max-width: 767px){
-    main{
-      margin-top: 70px;
+    body{
+      overflow-x: hidden;
+    }
+    .skat{
+      height: 20vmin;
     }
     header{
+      position: fixed;
+      background-color: $w;
       justify-content: space-between;
+      padding-bottom: 35px;
+      
+      
       img{
         width: 70%;
       }
@@ -478,6 +484,39 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
           }
         }
       }
+    }
+    
+    .open {
+      display: flex;
+      margin-top: 8vmin;
+      left: 0%;
+      transition: background-color 0.3s linear;
+      z-index: 9;
+      position:fixed;
+      flex-direction: column;
+      background-color: $bgl;
+      padding-top: 20px;
+      height:300vh;
+      width:100%;
+      align-items: center;
+      li{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10vmin;
+        display: flex;
+        a{
+          padding: 10px;
+        }
+        &:hover{
+          background-color:$pc;
+          border-radius: 3px;
+          transition: background-color 0.3s linear;
+          a{
+            color: $w;
+          }
+        }
+      }
+
     }
     .jumbotron{
       figure{
