@@ -21,9 +21,12 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
     align-items: center;
     overflow-x: hidden;
   }
+  .cs_skip{
+    display: none;
+  }
   main{
-    margin-bottom: 900px;
-    margin-top: 100px;
+    margin-bottom: 200px;
+    // margin-top: 100px;
     max-width: 1440px;
     width: 90%;
     display: flex;
@@ -80,7 +83,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
   }
 
   .jumbotron {
-    margin: 0% 5% 0% 5%;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -652,6 +655,52 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
 
 
 
-  // ! Responsive
+  // ! Loading
+  .loadingsignal{
+
+    margin-bottom: 400px;
+    margin-left: 50%;
+  
+    --d:22px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    color: $pc;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: l27 1s infinite steps(8);
+  }
+  @keyframes l27 {
+    100% {transform: rotate(1turn)}  
+  }
 
 
+
+
+
+  .toggleback{
+    margin-top: 100px;
+    background-color: $pc;
+    display: flex;
+    width: max-content;
+    padding: 2px 20px 2px 20px;
+    border-radius: 35px;
+
+    &:hover {
+      background-color: $txt; 
+    }
+
+    a{
+      font-size: 16px;
+      color: $w;
+      span{
+        font-size: 20px;
+      }
+    }
+  }
