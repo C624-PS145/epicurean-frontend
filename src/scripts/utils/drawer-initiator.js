@@ -6,7 +6,7 @@ const Inisiatordrawer = {
       this._drawertoggle(event, drawer);
     });
 
-    content.addEventListener('click', (event) => {
+    drawer.addEventListener('click', (event) => {
       this._drawertutup(event, drawer);
     });
 
@@ -20,6 +20,28 @@ const Inisiatordrawer = {
         }
       }
     });
+
+    // Prevent closing when clicking inside the content area
+    content.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+
+    // Add event listener for all links to scroll to top on click
+    document.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const href = link.getAttribute('href');
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+          window.location.href = href;
+        }, 100); // Add slight delay if needed
+      });
+    });
+
+    // Ensure scroll restoration is manual
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
   },
 
   _drawertoggle(event, drawer) {
@@ -28,7 +50,6 @@ const Inisiatordrawer = {
   },
 
   _drawertutup(event, drawer) {
-    event.stopPropagation();
     drawer.classList.remove('open');
   },
 };
