@@ -84,6 +84,7 @@ const aboutmadura = `
 `;
 
 const aboutplate = `
+
 <div class="developer">
     <h2>Developer.</h2>
     <div class="developer-container">

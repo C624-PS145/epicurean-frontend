@@ -145,15 +145,18 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
   
   @media screen and (max-width: 767px){
 
-    .label{
-        section{
-            h2{
-                font-size: 32px;
+    .abouters{
+        .label{
+            section{
+                h2{
+                    font-size: 32px;
+                }
             }
+    
         }
 
     }
- 
+
     .developer-container{
         grid-template-columns: 1fr;
     }
