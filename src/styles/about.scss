@@ -5,6 +5,7 @@ $w:#ffff;
 $bgl:#FAFAFA;
 $jlt : #222222;
 $ds: #555555;
+$de :#DEDEDE;
 $bva:#E9F7F1;
 $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
 
@@ -23,75 +24,57 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
         }
     
     }
+    
+
     .developer{
-        width: 80%;
+
         h2{
-            margin-left: 13px;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 30px;
         }
-    }
+        .developer-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
 
-    .developer-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
-    }
-    
-    .anggota-developer{
-        box-shadow: $shadowbox;
-        background-color: #DEDEDE;
-        padding: 40px;
-        margin: 10px;
-        border-radius: 16px;
-        max-width: 396px;
-        min-height: 432px;
-        text-align: center;
-        h3{
-            font-size: 29px;
-            font-weight: 300;
-        }
-        .github{
-            margin-top: 80px;
-            p{
-                font-size: 13px;
+            img{
+                max-width: 150px;
+                border-radius: 100px;
+                object-fit: cover;
+
+                
             }
-        }
-        p{
-            font-size: 17px;
-        }
-    }
-    
-    .anggota-developer img {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px; 
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
-    
-    .github {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-        font-size: 10px;
-    }
-    .github img {
-        width: 24px;
-        height: 24px; 
-        margin-right: 5px;
+            h3{
+                font-size: 23px ;
+                margin-top: 10px;
+                font-weight: 400;
+            }
 
+            .agtdev{
+                text-align: center;
+                background-color: $de;
+                min-height:432px;
+                padding: 30px;
+                width: 290px;
+                border-radius: 35px;
+
+                
+            .github{
+                margin-top: 50px;
+                img{
+                    max-width: 40px;
+                }
+            }
+
+
+            }
+
+        }
     }
 
-    img:hover {
-        transition: transform 0.4s ease;
-        transform: scale(1.08);
-      }
-    
+
     .visi-misi{
-        box-shadow: $shadowbox;
         h2{
             font-size: 24px;
             margin-bottom: 15px;
@@ -136,13 +119,14 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
         }
     }
 
-    
-@media screen and (max-width: 1050px){
-    .developer-container{
-        grid-template-columns: 1fr 1fr;
-    }
-  }
   
+  @media screen and (max-width: 768px){
+    .agtdev{
+        width: 200px;
+    }
+    
+    
+  }
   @media screen and (max-width: 767px){
 
     .abouters{
@@ -154,13 +138,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
             }
     
         }
-
     }
-
-    .developer-container{
-        grid-template-columns: 1fr;
-    }
-
     .visi-misi-container{
         grid-template-columns: 1fr;
         .misi{

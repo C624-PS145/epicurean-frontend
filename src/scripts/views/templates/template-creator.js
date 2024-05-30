@@ -86,34 +86,42 @@ const aboutmadura = `
 const aboutplate = `
 
 <div class="developer">
+
     <h2>Developer.</h2>
+
     <div class="developer-container">
-        <div class="anggota-developer">
+
+        <div class="agtdev">
             <img src="./images/yohan.jpg" alt="Profil Yohan Permana">
             <h3>Yohan Permana</h3>
             <p>Front-End 1 Web Dev</p>
-            <div class="github">
+            
+            <section class="github">
                 <img src="./images/github.png" alt="Github">
                 <p>YohanpermanaRepository</p>
-            </div>
+            </section>
         </div>
-        <div class="anggota-developer">
+
+        <div  class="agtdev">
             <img src="./images/jahfal.jpg" alt="Profil Jahfal Azzuhri Subroto">
             <h3>Jahfal Azzuhri S</h3>
             <p>Front-End 2 Web Dev</p>
-            <div class="github">
+            
+            <section class="github">
             <img src="./images/github.png" alt="Github">
                 <p>jahfal1987</p>
-            </div>
+            </section>
         </div>
-        <div class="anggota-developer">
+
+        <div  class="agtdev">
             <img src="./images/hikmal.jpg" alt="Profil M Nur Hikmal A">
             <h3>M Nur Hikmal A</h3>
             <p>Back End Web Dev</p>
-            <div class="github">
+
+            <section class="github">
             <img src="./images/github.png" alt="Github">
                 <p>HikmalRepository</p>
-            </div>
+            </section>
         </div>
     </div> 
 </div>
