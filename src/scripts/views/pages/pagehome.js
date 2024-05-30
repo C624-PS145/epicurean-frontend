@@ -20,7 +20,7 @@ const Home = {
     <article class="testimoni">
       <div class="label">
         <section>
-          <h2>Testimoni Terbaik</h2>
+          <h2>Review Terbaru</h2>
           <p>Lorem Ipsum is simply dummy text of </p>
         </section>
       </div>
