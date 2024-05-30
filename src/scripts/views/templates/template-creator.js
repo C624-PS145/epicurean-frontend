@@ -150,7 +150,7 @@ const detailplate = (detail) => `
 
     <div>
         <h2>${detail.nama_restauran}</h2>
-        <p>Alamat : Jl. Telang indah gang asri no 21 kec. kamal >${detail.id}</p>
+        <p>Alamat : Jl. Telang indah gang asri no 21 kec. kamal </p>
         <p>Kabupaten : <span>Bangkalan</span></p>
         
         <div class="deskripsi">
@@ -177,12 +177,10 @@ const detailplate = (detail) => `
     <div class="makan-minum">
       <div class="makan">
           <h3>Makanan</h3>
-          <ul>
-              <li>BEBEK GORENG SINJAY KREMES <span>Rp. 43.000</span></li>
-              <li>SPESIAL SAMBAL PENCIT <span>Rp. 32.000</span></li>
-              <li>Bebek Sinjay Madura 1 Potong <span>Rp. 45.000</span></li>
-              <li>Nasi dan ayam goreng</span> <span>Rp. 20.000</span></li>
-          </ul>
+
+          <ul>${detail.foods.map((food) => `<li tabindex="0">${food.nama_makanan} <span> - Rp ${food.harga} </span></li>`).join('')}</ul>
+         
+          
       </div>
       <div class="minum"> 
           <h3>Minuman</h3>

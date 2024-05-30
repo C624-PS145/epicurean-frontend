@@ -32,7 +32,7 @@ const Pagekuliner = {
     const loadingElement = document.querySelector('#loading');
     try {
       search.innerHTML += searchkuliner;
-      const defallkulin = await RestaurantApiSource.apikontenresto();
+      const defallkulin = await RestaurantApiSource.percobaan();
       defallkulin.forEach((allkul) => {
         allkulinerkontainer.innerHTML += allkuliner(allkul);
       });

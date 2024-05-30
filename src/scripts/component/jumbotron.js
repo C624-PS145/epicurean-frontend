@@ -2,7 +2,6 @@ class jumbotron extends HTMLElement {
   constructor() {
     super();
     this.render();
-    this.animate();
   }
 
   render() {

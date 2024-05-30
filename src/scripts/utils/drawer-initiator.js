@@ -42,6 +42,12 @@ const Inisiatordrawer = {
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
+
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash.startsWith('#/detail/')) {
+        window.scrollTo(0, 0);
+      }
+    });
   },
 
   _drawertoggle(event, drawer) {
