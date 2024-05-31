@@ -34,19 +34,26 @@ const daftartestimoni = (testimoni) => `
 
 const searchkuliner = () => `
   <form id="searchForm">
-    <label for="namaTempat">Nama Tempat:</label>
-    <input type="text" id="namaTempat" name="namaTempat" placeholder="Masukkan nama tempat">
+  
+  
+  <input type="text" id="namaTempat" name="namaTempat" placeholder="Search wisata kuliner">
+  
+    <div>
 
-    <label for="kabupaten">Kabupaten:</label>
     <select id="kabupaten" name="kabupaten">
-      <option value="">Pilih Kabupaten</option>
-      <option value="Bangkalan">Bangkalan</option>
-      <option value="Sampang">Sampang</option>
-      <option value="Sumenep">Sumenep</option>
-      <option value="Pamekasan">Pamekasan</option>
+    <option value="">No Filter</option>
+    <option value="Bangkalan">Bangkalan</option>
+    <option value="Sampang">Sampang</option>
+    <option value="Sumenep">Sumenep</option>
+    <option value="Pamekasan">Pamekasan</option>
     </select>
+    <button type="submit">⌕</button>
+    </div>
 
-    <button type="submit">Cari</button>
+
+   
+    
+    
   </form>
 `;
 
