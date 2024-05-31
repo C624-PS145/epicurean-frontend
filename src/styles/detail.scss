@@ -62,6 +62,19 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
             .pemesanan{
                 margin-top: 20px;
 
+                img{
+                    margin-top: 10px;
+                    max-width: 150px;
+                    border-radius: 30px;
+                    
+                &:hover {
+                    box-shadow:  $shadowbox; 
+                    transition: ease 0.5s;
+                }
+                }
+
+
+
                 iframe{
                     border-radius: 10px;
                     width: 100%;
@@ -153,9 +166,12 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 li{
                     img{
                         width: 100%;
-                        max-width: 320px;
+                        max-width: 600px;
                         border-radius: 5px;
                         box-shadow: $shadowbox;
+                        object-fit: cover;
+                        max-height: 300px;
+                        
                     }
                 }
 

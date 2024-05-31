@@ -1,5 +1,5 @@
-import RestaurantApiSource from '../../data/sourcerestoAPI';
-import { daftarpopuler, daftartestimoni, aboutmadura } from '../templates/template-creator';
+import EpicureanApiSource from '../../data/sourceAPI';
+import { daftarpopuler, aboutmadura } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -35,18 +35,13 @@ const Home = {
 
   async afterRender() {
     const kontainerKuliner = document.querySelector('#dafpop');
-    const kontainerTestimoni = document.querySelector('#daftes');
     const kontaineraboutmadura = document.querySelector('#aboutmadura');
     kontaineraboutmadura.innerHTML += aboutmadura;
     const loadingElement = document.querySelector('#loading');
     try {
-      const daftarKuliner = await RestaurantApiSource.apikontenresto();
-      const daftarTestimoni = await RestaurantApiSource.apikontenresto();
+      const daftarKuliner = await EpicureanApiSource.wisatakulinerpopuler();
       daftarKuliner.forEach((kuliner) => {
         kontainerKuliner.innerHTML += daftarpopuler(kuliner);
-      });
-      daftarTestimoni.forEach((testimoni) => {
-        kontainerTestimoni.innerHTML += daftartestimoni(testimoni);
       });
     } catch (error) {
       console.error('gagal melakukan fetch wisata kuliner:', error);

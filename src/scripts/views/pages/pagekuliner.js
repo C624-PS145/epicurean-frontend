@@ -1,4 +1,4 @@
-import RestaurantApiSource from '../../data/sourcerestoAPI';
+import EpicureanApiSource from '../../data/sourceAPI';
 import { allkuliner, searchkuliner } from '../templates/template-creator';
 
 const Pagekuliner = {
@@ -32,7 +32,7 @@ const Pagekuliner = {
     const loadingElement = document.querySelector('#loading');
     try {
       search.innerHTML += searchkuliner;
-      const defallkulin = await RestaurantApiSource.percobaan();
+      const defallkulin = await EpicureanApiSource.percobaan();
       defallkulin.forEach((allkul) => {
         allkulinerkontainer.innerHTML += allkuliner(allkul);
       });

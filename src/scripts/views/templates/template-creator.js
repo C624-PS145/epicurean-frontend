@@ -2,19 +2,23 @@
 
 const daftarpopuler = (populer) => `
 <article>
-  <img src="./images/sinjay.jpg" alt="gambar wisata kuliner">
-  <p class="lok">Bangkalan</p>
+  <img src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
+  <p class="lok">${populer.kabupaten}</p>
   <h3><a href="#/detail/${populer.id}">Bebek Sinjai </a></h3>
-  <p>Buka 08.00-21.00 <span>&#9733;5</span></p>
+  <p>${populer.jam_operasional} <span>&#9733</span> ${populer.rating_avg}</p>
+  
   <section>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-  <div><button>
-  <a href="#/detail/${populer.id}">  Detail<span>→</span></a>
-  </button></div>
+  <p>${populer.deskripsi}</p>
 
-
-  </section> 
+  <div>
+    <button>
+    <a href="#/detail/${populer.id}">  Detail<span>→</span></a>
+    </button>
+  </div>
+  
+</section> 
 </article>`;
+
 const daftartestimoni = (testimoni) => `
 <article>
   <img src="./images/sinjay.jpg" alt="gambar wisata kuliner">
@@ -154,48 +158,42 @@ const detailplate = (detail) => `
 <section class="informasidangambar">
 
     <div class="detailgambar-kontainer">
-      <img src="${detail.gambar_restauran}" alt="gambar wistaa kuliner">
+      <img src="${detail.gambar_katalog}" alt="gambar wistaa kuliner">
     </div>
 
     <div>
-        <h2>${detail.nama_restauran}</h2>
-        <p>Alamat : Jl. Telang indah gang asri no 21 kec. kamal </p>
-        <p>Kabupaten : <span>Bangkalan</span></p>
+        <h2>${detail.nama_tempat}</h2>
+        <p>Alamat :${detail.alamat} </p>
+        <p>Kabupaten : <span> ${detail.kabupaten} </span></p>
         
         <div class="deskripsi">
-        <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
+        <p>${detail.deskripsi}</p>
         </div>
 
         <section class="pemesanan">
-            <p>informasi pemesanan : <a href="">0867328378237</a></p>
-            <p>Jam operasional : 08.00-05.00 wib</p>
+            <p>informasi pemesanan (Whatsapp)</p>
+            <a href="${detail.link_wa}">
+            <img src="../images/whatsapp.png" alt="WhatsApp">
+            </a>
+            <p>Jam operasional : ${detail.jam_operasional}</p>
             <P>Lokasi Google Maps :</P>
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63319.6312330556!2d112.72847349020633!3d-7.300188377779806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95b5bc53595%3A0x217712a51cef984b!2sBebek%20Sinjay%20Tidar!5e0!3m2!1sen!2sid!4v1716748252850!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="${detail.link_maps}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
     </div>
 
 </section>
 
-
 <section class="daftar-menu">
     <h2>Daftar Menu</h2>
     <div class="makan-minum">
       <div class="makan">
           <h3>Makanan</h3>
-
-          <ul>${detail.foods.map((food) => `<li tabindex="0">${food.nama_makanan} <span> - Rp ${food.harga} </span></li>`).join('')}</ul>
-         
-          
+          <ul>${detail.foods.map((food) => `<li tabindex="0">${food.nama_makanan} <span> - Rp ${food.harga} </span></li>`).join('')}</ul>          
       </div>
       <div class="minum"> 
           <h3>Minuman</h3>
-          <li> Es Teh</span> <span>Rp. 4.000</span></li>
-          <li> Es Jeruk</span> <span>Rp. 5.000</span></li>
-          <li> Es Degan</span> <span>Rp. 8.000</span></li>
+          <ul>${detail.drinks.map((drink) => `<li tabindex="0">${drink.nama_minuman} <span> - Rp ${drink.harga} </span></li>`).join('')}</ul>         
       </div>
     </div>
 
@@ -204,20 +202,16 @@ const detailplate = (detail) => `
 <section class="fasilitas">
 <h2>Fasilitas</h2>
     <ul>
-        <li>Free Wifi</li>
-        <li>Parkir Luas</li>
-        <li>Gazebo</li>
-        <li>Toilet</li>
-        <li>Area Merokok dan NON Merokok</li>
+        <li>${detail.fasilitas}</li>
     </ul>
 </section>
 
 <section class="galeri">
 <h2>Galeri</h2>
     <ul>
-        <li><img src="./images/galeri13.png" alt="gambar1"></li>
-        <li><img src="./images/galeri13.png" alt="gambar2"></li>
-        <li><img src="./images/galeri13.png" alt="gambar3"></li>
+        <li><img src="${detail.galeri1}" alt="gambar1"></li>
+        <li><img src="${detail.galeri2}" alt="gambar2"></li>
+        <li><img src="${detail.galeri3}" alt="gambar3"></li>
     </ul>
 </section>
 

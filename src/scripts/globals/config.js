@@ -1,6 +1,6 @@
-const CONFIG2 = {
+const CONFIG = {
   BASE_URL: 'http://localhost:3000/api/',
   DEFAULT_LANGUAGE: 'en-us',
 };
 
-export default CONFIG2;
+export default CONFIG;
