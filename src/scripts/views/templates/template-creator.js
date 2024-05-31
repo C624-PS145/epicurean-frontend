@@ -172,7 +172,7 @@ const detailplate = (detail) => `
 
         <section class="pemesanan">
             <p>informasi pemesanan (Whatsapp)</p>
-            <a href="${detail.link_wa}">
+            <a href="https://api.whatsapp.com/send?phone=62${detail.link_wa}">
             <img src="../images/whatsapp.png" alt="WhatsApp">
             </a>
             <p>Jam operasional : ${detail.jam_operasional}</p>
