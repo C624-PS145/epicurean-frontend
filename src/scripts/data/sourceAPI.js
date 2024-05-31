@@ -12,6 +12,12 @@ class EpicureanApiSource {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async searchkuliner(query, kabupaten) {
+    const response = await fetch(API_ENDPOINT.SEARCH_FILTER(query, kabupaten));
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 
 export default EpicureanApiSource;
