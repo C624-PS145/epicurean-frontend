@@ -11,7 +11,7 @@ const Home = {
           <h2>Wisata kuliner terpopuler</h2>
           <p>Lorem Ipsum is simply dummy text of </p>
         </section>
-      <button>View All</button>
+      <button id="viewAllButton" >View All</button>
       </div>
       <div id="dafpop" class="list-item"></div> 
     </article>
@@ -28,8 +28,6 @@ const Home = {
     </article>
 
     <article class="aboutmadura" id="aboutmadura"></article>
-
-
     `;
   },
 
@@ -38,6 +36,12 @@ const Home = {
     const kontaineraboutmadura = document.querySelector('#aboutmadura');
     kontaineraboutmadura.innerHTML += aboutmadura;
     const loadingElement = document.querySelector('#loading');
+
+    const viewAllButton = document.querySelector('#viewAllButton');
+    viewAllButton.addEventListener('click', () => {
+      window.location.hash = '#/pagekuliner';
+    });
+
     try {
       const daftarKuliner = await EpicureanApiSource.wisatakulinerpopuler();
       daftarKuliner.forEach((kuliner) => {
