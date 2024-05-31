@@ -212,6 +212,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
           span{
             font-size: 20px;
             color: #ff701d;
+            
           }
         }
         
@@ -227,6 +228,11 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
           p{
             color:$ds;
             text-align: justify;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
           }
           div{
             display: flex;

@@ -31,6 +31,7 @@ const daftartestimoni = (testimoni) => `
     </span>
   </section> 
 </article>`;
+
 const allkuliner = (kuliner) => `
 <article>
   <img src="${kuliner.gambar_restauran}">

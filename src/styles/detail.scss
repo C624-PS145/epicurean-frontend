@@ -52,6 +52,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 p{
                     font-size: 15px;
                     margin-top: 15px;
+                    text-align: justify;
                     span{
                         color: $pc;
                     }
@@ -166,12 +167,16 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 li{
                     img{
                         width: 100%;
-                        max-width: 600px;
+                        max-width: 400px;
                         border-radius: 5px;
                         box-shadow: $shadowbox;
                         object-fit: cover;
-                        max-height: 300px;
+                        max-height: 200px;
+                        transition:ease-in 0.2s;
                         
+                    }
+                    img:hover {
+                        transform: scale(1.10);
                     }
                 }
 
