@@ -32,34 +32,41 @@ const daftartestimoni = (testimoni) => `
   </section> 
 </article>`;
 
-const allkuliner = (kuliner) => `
-<article>
-  <img src="${kuliner.gambar_restauran}">
-  <p class="lok"></p>
-  <h3><a href="#/detail/${kuliner.id}">${kuliner.nama_restauran} </a></h3>
-  <p>Buka 08.00-21.00 <span>&#9733;5</span></p>
-  <section>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-  <div><button>Detail<span>→</span></button></div>
-  </section> 
-</article>`;
+const searchkuliner = () => `
+  <form id="searchForm">
+    <label for="namaTempat">Nama Tempat:</label>
+    <input type="text" id="namaTempat" name="namaTempat" placeholder="Masukkan nama tempat">
 
-const searchkuliner = `
-<form id="searchForm" class="searching">
-  <div class="input">
-    <input type="text" id="searchInput" name="query" placeholder="Search anything...." required>
-    <button type="submit" id="searchButton">⌕</button>
-  </div>
-  <div class="dropdown">
-  <button class="dropbtn">⌨</button>
-  <div class="dropdown-content">
-      <a href="#">Bangkalan</a>
-      <a href="#">Sampang</a>
-      <a href="#">Pamekasan</a>
-      <a href="#">Sumenep</a>
-  </div>
-</div>
-</form>`;
+    <label for="kabupaten">Kabupaten:</label>
+    <select id="kabupaten" name="kabupaten">
+      <option value="">Pilih Kabupaten</option>
+      <option value="Bangkalan">Bangkalan</option>
+      <option value="Sampang">Sampang</option>
+      <option value="Sumenep">Sumenep</option>
+      <option value="Pamekasan">Pamekasan</option>
+    </select>
+
+    <button type="submit">Cari</button>
+  </form>
+`;
+
+const allkuliner = (searchfilter) => `
+  <article>
+    <img src="${searchfilter.gambar_katalog}">
+    <p class="lok"></p>
+    <h3><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
+    <p>${searchfilter.jam_operasional} <span>&#9733;</span> ${searchfilter.rating_avg}</p>
+    <section>
+      <p>${searchfilter.deskripsi}</p>
+      <div>
+        <button>
+          <a href="#/detail/${searchfilter.id}">Detail<span>→</span></a>
+        </button>
+      </div>
+    </section> 
+  </article>
+`;
+
 const aboutmadura = `
 
 <div class="label">
