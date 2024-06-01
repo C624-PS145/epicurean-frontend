@@ -70,8 +70,8 @@ class Jumbotron extends HTMLElement {
         exploreButton.style.transform = 'scale(1)';
         setTimeout(() => {
           window.location.href = '#/pagekuliner';
-        }, 300);
-      }, 300);
+        }, 200);
+      }, 200);
     });
   }
 }
