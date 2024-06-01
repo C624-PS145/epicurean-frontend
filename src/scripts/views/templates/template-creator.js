@@ -1,12 +1,26 @@
 // import CONFIG from '../../globals/configure';
 const { formatDistanceToNow } = require('date-fns');
 
+export const createStars = (rating) => {
+  const fullStars = Math.floor(rating);
+  const halfStars = rating % 1 >= 0.5 ? 1 : 0;
+  const emptyStars = 5 - fullStars - halfStars;
+
+  let stars = '★'.repeat(fullStars);
+  if (halfStars) {
+    stars += '<span class="half-star">★</span>';
+  }
+  stars += '☆'.repeat(emptyStars);
+
+  return stars;
+};
+
 const daftarpopuler = (populer) => `
 <article>
   <img src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
   <p class="lok">${populer.kabupaten}</p>
   <h3><a href="#/detail/${populer.id}">${populer.nama_tempat}</a></h3>
-  <p>${populer.jam_operasional} <span>&#9733</span> ${populer.rating_avg}</p>
+  <p>${populer.jam_operasional} <span>${createStars(populer.rating_avg)}</span</p>
   
   <section>
   <p>${populer.deskripsi}</p>
@@ -15,17 +29,17 @@ const daftarpopuler = (populer) => `
     <a href="#/detail/${populer.id}">  Detail<span>→</span></a>
     </button>
   </div>
-</section>
- 
+</section> 
 </article>`;
 
 const daftartestimoni = (testimoni) => `
 <article>
+    <p class="tgltesti">${formatDistanceToNow(new Date(testimoni.tanggal), { addSuffix: true })}<p>
   <img src="${testimoni.gambar_katalog}" alt="gambar wisata kuliner">
-  <h3><a href="#/detail/${testimoni.wisata_kuliner_id}">Bebek Sinjai </a></h3>
+  <h3><a href="#/detail/${testimoni.wisata_kuliner_id}">${testimoni.nama_tempat}</a></h3>
+  <p><span>${createStars(testimoni.rating)}</span></p>
   <section>
     <h4>${testimoni.nama_pengulas}</h4>
-    <p><span>&#9733</span>${testimoni.rating}</p>
     <p>${testimoni.ulasan}</p>
     
   </section> 
@@ -52,7 +66,7 @@ const allkuliner = (searchfilter) => `
     <img src="${searchfilter.gambar_katalog}">
     <p class="lok"></p>
     <h3><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
-    <p>${searchfilter.jam_operasional} <span>&#9733;</span> ${searchfilter.rating_avg}</p>
+    <p>${searchfilter.jam_operasional} <span>${createStars(searchfilter.rating_avg)}</span>${searchfilter.rating_avg}</p>
     <section>
       <p>${searchfilter.deskripsi}</p>
       <div>

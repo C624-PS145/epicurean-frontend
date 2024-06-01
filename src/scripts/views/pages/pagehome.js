@@ -9,7 +9,9 @@ const Home = {
       <div class="label">
         <section>
           <h2>Wisata kuliner terpopuler</h2>
-          <p>Lorem Ipsum is simply dummy text of </p>
+          <p>
+          Berikut adalah tiga wisata kuliner terpopuler di Madura yang paling disukai oleh para pecinta kuliner.
+          </p>
         </section>
       <button id="viewAllButton" >View All</button>
       </div>
@@ -21,7 +23,7 @@ const Home = {
       <div class="label">
         <section>
           <h2>Review Terbaru</h2>
-          <p>Lorem Ipsum is simply dummy text of </p>
+          <p>Baca ulasan terbaru dari para pecinta kuliner yang telah menikmati hidangan-hidangan lezat di Madura</p>
         </section>
       </div>
       <div id="daftes" class="list-item2"></div>

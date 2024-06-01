@@ -6,7 +6,7 @@ $bgl:#FAFAFA;
 $jlt : #222222;
 $ds: #555555;
 $bva:#E9F7F1;
-$shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
+$shadowbox: 0 4px 3px #af8b1631;
 
 
 #button1 {
@@ -159,6 +159,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
     p{
       color: $ds;
       margin-top: 10px;
+      max-width: 600px;
     }
     button{
       margin-left: 100px;
@@ -203,6 +204,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
           margin-bottom: 30px;
           transition: transform 0.4s ease-in-out;
         }
+        
         img:hover {
             transform: scale(1.05);
         }
@@ -213,8 +215,10 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
         p{
           word-break: break-all;
           span{
-            font-size: 20px;
+            font-size: 23px;
             color: #ff701d;
+            margin-left: 10px;
+            margin-right: 10px;
           }
         }
         
@@ -282,57 +286,84 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
     .list-item2{
       display: grid;
       gap: 30px;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
       article{
-        box-shadow: $shadowbox;
+        // box-shadow: $shadowbox;
         border-radius: 16px;
-        background-color: $bgl;
+        // background-color: $bgl;
         padding: 30px;
         max-width: 411px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         img{
-          width: 100%;
-          max-width: 346px;
-          height: 207px;
+          width: 150px;
+          height: 150px;
+
+          // max-width: 346px;
+          // height: 207px;
           object-fit: cover;
-          border-radius: 16px;
+          border-radius: 100px;
           margin-bottom: 30px;
           transition: transform 0.4s ease-in-out;
         }
         img:hover {
           transform: scale(1.05);
         }
-        
+        .tgltesti{
+          margin-bottom: 15px;
+          font-size: 13px;
+        }
         h3{
           a{
             font-size: 24px;
             font-weight:600;
             color: $jlt;
             word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
         }
+
+        p{
+          span{
+            font-size: 23px;
+            color: #ff701d;
+          }
+        }
+
+
         section{
           margin-top: 10px;
+          display: flex;
+          flex-direction: column;
           h4{
-            font-size: 15px;
+            font-size: 16px;
             color: $jlt;
-            font-weight:600;
+            font-weight:500;
             word-break: break-all;
+            border-bottom: solid $ds 2px;
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
           }
           p{
             color: $jlt;
             word-wrap: break-word;
             word-break: break-all;
+            text-align: justify;
+            
           }
           span{
-            word-break: break-all;
             p{
               margin-top: 10px;
-              border-top: 1.5px solid $jlt;
               color:$ds;
               text-align: justify;
               word-break: break-all;
+
+              
             }
           }
         }
@@ -367,6 +398,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
             font-size: 16px;
             color: $ds;
             text-align: justify;
+            
            
           }
       
@@ -743,3 +775,6 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
       }
     }
   }
+
+
+  
