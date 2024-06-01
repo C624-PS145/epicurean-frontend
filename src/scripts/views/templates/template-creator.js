@@ -1,4 +1,5 @@
 // import CONFIG from '../../globals/configure';
+const { formatDistanceToNow } = require('date-fns');
 
 const daftarpopuler = (populer) => `
 <article>
@@ -232,16 +233,12 @@ const detailplate = (detail) => `
 
 <section class="form-review">
     <h2>Form Review</h2>
-
     <form class="form-review-container" action="#" method="post">
-
-
     <div class="nama-rating">
         <div class="form-group">
             <label for="name">Masukkan Nama</label>
             <input type="text" id="name" name="name" placeholder="example Yohan Permana" required>
         </div>
-        
         <div class="form-group">
             <label for="rating">Masukkan Rating (1-5)</label>
             <select id="rating" name="rating" required>
@@ -254,12 +251,10 @@ const detailplate = (detail) => `
             </select>
         </div>
     </div>
-
         <div class="form-group2">
             <label for="review">Masukkan Review Anda</label>
             <textarea id="review" name="review" rows="4" placeholder="example Tempatnya bersih dan makanannya enak" required></textarea>
         </div>
-
         <button type="submit">Kirim</button>
     </form>
 </section>
@@ -269,51 +264,21 @@ const detailplate = (detail) => `
     
     <div class="review-container2">
 
-    <div class="user-review">
-          
+    ${detail.reviews.map((review) => `
+        <div class="user-review">
             <div class="judul">
-              <h4>Jahfal Azzuhri S</h4>
-              <p>19 -22 20012</p>
+                <h4>${review.nama_pengulas}</h4>
+                <p>${formatDistanceToNow(new Date(review.tanggal))}</p>
+                <p>${review.rating}</p>
             </div>
-            
             <section class="review">
-            <p>Tempatnya bersih makanannya enak</p>
+                <p>${review.ulasan}</p>
             </section>
-            
-    </div>
-    <div class="user-review">
-          
-            <div class="judul">
-              <h4>Yohan permana</h4>
-              <p>19 -22 20012</p>
-            </div>
-            
-            <section class="review">
-            <p>Tempatnya bersih makanannya enak</p>
-            </section>
-            
-    </div>
-    <div class="user-review">
-          
-            <div class="judul">
-              <h4>M nur Hikmal</h4>
-              <p>19 -22 20012</p>
-            </div>
-            
-            <section class="review">
-            <p>Tempatnya bersih makanannya enak</p>
-            </section>
-            
-    </div>
-    
+        </div>`).join('')}
     </div>
 
 </section>            
-</div>
-
-
-
-`;
+</div>`;
 
 export {
   daftarpopuler,
