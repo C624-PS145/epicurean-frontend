@@ -15,7 +15,8 @@ const daftarpopuler = (populer) => `
     <a href="#/detail/${populer.id}">  Detail<span>→</span></a>
     </button>
   </div>
-</section> 
+</section>
+ 
 </article>`;
 
 const daftartestimoni = (testimoni) => `
@@ -26,6 +27,7 @@ const daftartestimoni = (testimoni) => `
     <h4>${testimoni.nama_pengulas}</h4>
     <p><span>&#9733</span>${testimoni.rating}</p>
     <p>${testimoni.ulasan}</p>
+    
   </section> 
 </article>`;
 

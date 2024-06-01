@@ -7,7 +7,7 @@ const Detail = {
   async render() {
     return `
     <div class="toggleback">
-        <a href="#/pagehome"> <span>←</span> Kembali </a>
+         <a id="back-button" href="#"> <span>←</span> Kembali </a>
     </div>
 
     <div class="detailers" id ="detailers">
@@ -23,6 +23,12 @@ const Detail = {
   },
 
   async afterRender() {
+    // Menambahkan event listener pada tombol kembali
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', () => {
+      history.back();
+    });
+
     const detailkontainer = document.querySelector('#detailers');
 
     const url = UrlParser.parseActiveUrlWithoutCombiner();

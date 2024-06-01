@@ -39,6 +39,11 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                     border-radius: 30px;
                     box-shadow:$shadowbox;
                     margin-right: 8%;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: ease 0.5s;
+                    }
                 }
             }
             
@@ -72,7 +77,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                     border-radius: 30px;
                     
                 &:hover {
-                    box-shadow:  $shadowbox; 
+                    transform: scale(1.05);
                     transition: ease 0.5s;
                 }
                 }
@@ -332,7 +337,13 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
 @media screen and (max-width: 768px){
 
     .detailers{
+        .form-group{
+            input{
+                margin-bottom: 10px;
+            }
+        }
         .label{
+            margin-top: 20px;
             justify-content: center;
             section{
                 h2{

@@ -5,7 +5,7 @@ const Pagekuliner = {
   async render() {
     return `
       <div class="toggleback">
-        <a href="#/pagehome"> <span>←</span> Kembali </a>
+        <a id="back-button" href="#"> <span>←</span> Kembali </a>
       </div>
       <article class="allkuliner">
         <div class="label">
@@ -24,6 +24,11 @@ const Pagekuliner = {
     const search = document.querySelector('#search');
     const allkulinerContainer = document.querySelector('#allkulin');
     const loadingElement = document.querySelector('#loading');
+
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', () => {
+      history.back();
+    });
 
     search.innerHTML = searchkuliner();
 

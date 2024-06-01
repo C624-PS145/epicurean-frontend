@@ -4,7 +4,7 @@ const About = {
   async render() {
     return `
     <div class="toggleback">
-        <a href="#/pagehome"> <span>←</span> Kembali </a>
+        <a id="back-button" href="#"> <span>←</span> Kembali </a>
     </div>
 
     <div class="abouters" id ="abouters">
@@ -21,6 +21,11 @@ const About = {
   },
 
   async afterRender() {
+    // Menambahkan event listener pada tombol kembali
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', () => {
+      history.back();
+    });
     const about = document.querySelector('#abouters');
     about.innerHTML += aboutplate;
   },
