@@ -88,8 +88,9 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
     .list-item{
       margin-top: 70px;
       display: grid;
-      gap: 30px;
-      grid-template-columns: auto auto auto;
+      gap: 50px;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-around;
       article{
         box-shadow: $shadowbox;
         border-radius: 16px;
@@ -112,12 +113,13 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
         }
         .lok{
           color: $pc;
+          word-break: break-all;
         }
         p{
+          word-break: break-all;
           span{
             font-size: 20px;
             color: #ff701d;
-            
           }
         }
         
@@ -126,6 +128,11 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
             font-size: 24px;
             font-weight:600;
             color: $jlt;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
         }
         section{
@@ -137,11 +144,11 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
-
+            word-break: break-all;
           }
           div{
             display: flex;
-            justify-content: end;
+            justify-content:end;
             margin-top: 20px;
             button{
               a{

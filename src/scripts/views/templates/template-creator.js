@@ -5,42 +5,34 @@ const daftarpopuler = (populer) => `
 <article>
   <img src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
   <p class="lok">${populer.kabupaten}</p>
-  <h3><a href="#/detail/${populer.id}">Bebek Sinjai </a></h3>
+  <h3><a href="#/detail/${populer.id}">${populer.nama_tempat}</a></h3>
   <p>${populer.jam_operasional} <span>&#9733</span> ${populer.rating_avg}</p>
   
   <section>
   <p>${populer.deskripsi}</p>
-
   <div>
     <button>
     <a href="#/detail/${populer.id}">  Detail<span>→</span></a>
     </button>
   </div>
-  
 </section> 
 </article>`;
 
 const daftartestimoni = (testimoni) => `
 <article>
-  <img src="./images/sinjay.jpg" alt="gambar wisata kuliner">
-  <h3><a href="#/detail/${testimoni.id}">Bebek Sinjai </a></h3>
+  <img src="${testimoni.gambar_katalog}" alt="gambar wisata kuliner">
+  <h3><a href="#/detail/${testimoni.wisata_kuliner_id}">Bebek Sinjai </a></h3>
   <section>
-    <h4>Yondaime Hokage</h4>
-    <p>&#9733;5</p>
-    <span>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-    </span>
+    <h4>${testimoni.nama_pengulas}</h4>
+    <p><span>&#9733</span>${testimoni.rating}</p>
+    <p>${testimoni.ulasan}</p>
   </section> 
 </article>`;
 
 const searchkuliner = () => `
   <form id="searchForm">
-  
-  
   <input type="text" id="namaTempat" name="namaTempat" placeholder="Search wisata kuliner">
-  
     <div>
-
     <select id="kabupaten" name="kabupaten">
     <option value="">No Filter</option>
     <option value="Bangkalan">Bangkalan</option>
@@ -50,11 +42,6 @@ const searchkuliner = () => `
     </select>
     <button type="submit">⌕</button>
     </div>
-
-
-   
-    
-    
   </form>
 `;
 
@@ -192,7 +179,7 @@ const detailplate = (detail) => `
             <img src="../images/whatsapp.png" alt="WhatsApp">
             </a>
             <p>Jam operasional : ${detail.jam_operasional}</p>
-            <P>Lokasi Google Maps :</P>
+            <p>Lokasi Google Maps :</p>
             <iframe src="${detail.link_maps}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
@@ -237,7 +224,7 @@ const detailplate = (detail) => `
     <div class="nama-rating">
         <div class="form-group">
             <label for="name">Masukkan Nama</label>
-            <input type="text" id="name" name="name" placeholder="example Yohan Permana" required>
+            <input type="text" id="name" name="name" placeholder="example Yohan Permana" maxlength="20" required>
         </div>
         <div class="form-group">
             <label for="rating">Masukkan Rating (1-5)</label>

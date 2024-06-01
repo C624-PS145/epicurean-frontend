@@ -1,5 +1,5 @@
 import EpicureanApiSource from '../../data/sourceAPI';
-import { daftarpopuler, aboutmadura } from '../templates/template-creator';
+import { daftarpopuler, aboutmadura, daftartestimoni } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -32,7 +32,9 @@ const Home = {
   },
 
   async afterRender() {
-    const kontainerKuliner = document.querySelector('#dafpop');
+    const kontainerPopuler = document.querySelector('#dafpop');
+    const kontainerbestreview = document.querySelector('#daftes');
+
     const kontaineraboutmadura = document.querySelector('#aboutmadura');
     kontaineraboutmadura.innerHTML += aboutmadura;
     const loadingElement = document.querySelector('#loading');
@@ -45,11 +47,15 @@ const Home = {
     try {
       const daftarKuliner = await EpicureanApiSource.wisatakulinerpopuler();
       daftarKuliner.forEach((kuliner) => {
-        kontainerKuliner.innerHTML += daftarpopuler(kuliner);
+        kontainerPopuler.innerHTML += daftarpopuler(kuliner);
+      });
+      const daftarKuliner2 = await EpicureanApiSource.reviewterbarudanterbaik();
+      daftarKuliner2.forEach((kuliner) => {
+        kontainerbestreview.innerHTML += daftartestimoni(kuliner);
       });
     } catch (error) {
       console.error('gagal melakukan fetch wisata kuliner:', error);
-      kontainerKuliner.innerHTML = '<p>Gagal menampilkan data pastikan terhubung koneksi internet  dan <span class="refresh" onclick="location.reload()">refresh</span> kembali   .</p>';
+      kontainerPopuler.innerHTML = '<p>Gagal menampilkan data pastikan terhubung koneksi internet  dan <span class="refresh" onclick="location.reload()">refresh</span> kembali   .</p>';
     } finally {
       loadingElement.style.display = 'none';
     }

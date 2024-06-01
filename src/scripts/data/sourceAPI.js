@@ -7,6 +7,12 @@ class EpicureanApiSource {
     return responseJson;
   }
 
+  static async reviewterbarudanterbaik() {
+    const response = await fetch(API_ENDPOINT.BEST_REVIEW);
+    const responseJson = await response.json();
+    return responseJson;
+  }
+
   static async wisatakulinerid(id) {
     const response = await fetch(API_ENDPOINT.GET_DETAIL_BYID(id));
     const responseJson = await response.json();

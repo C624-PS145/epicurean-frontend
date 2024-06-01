@@ -183,8 +183,9 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
     .list-item{
       margin-top: 70px;
       display: grid;
-      gap: 30px;
-      grid-template-columns: auto auto auto;
+      gap: 50px;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-around;
       article{
         box-shadow: $shadowbox;
         border-radius: 16px;
@@ -207,12 +208,13 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
         }
         .lok{
           color: $pc;
+          word-break: break-all;
         }
         p{
+          word-break: break-all;
           span{
             font-size: 20px;
             color: #ff701d;
-            
           }
         }
         
@@ -221,6 +223,11 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
             font-size: 24px;
             font-weight:600;
             color: $jlt;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
         }
         section{
@@ -232,11 +239,11 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
-
+            word-break: break-all;
           }
           div{
             display: flex;
-            justify-content: end;
+            justify-content:end;
             margin-top: 20px;
             button{
               a{
@@ -302,6 +309,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
             font-size: 24px;
             font-weight:600;
             color: $jlt;
+            word-break: break-all;
           }
         }
         section{
@@ -310,17 +318,21 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.158);
             font-size: 15px;
             color: $jlt;
             font-weight:600;
+            word-break: break-all;
           }
           p{
             color: $jlt;
+            word-wrap: break-word;
+            word-break: break-all;
           }
           span{
+            word-break: break-all;
             p{
               margin-top: 10px;
               border-top: 1.5px solid $jlt;
               color:$ds;
               text-align: justify;
-              
+              word-break: break-all;
             }
           }
         }

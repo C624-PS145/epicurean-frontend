@@ -48,13 +48,16 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                     font-size: 24px;
                     font-weight: 600;
                     color: $jlt;
+                    word-break: break-all;
                 }
                 p{
                     font-size: 15px;
                     margin-top: 15px;
                     text-align: justify;
+                    word-break: break-all;
                     span{
                         color: $pc;
+                        word-break: break-all;
                     }
                 }
                 
@@ -95,12 +98,14 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 font-size: 24px;
                 font-weight: 600;
                 margin-bottom: 10px;
+                word-break: break-all;
             }
             h3{
                 font-size: 20px;
                 font-weight: 500;
                 margin-bottom: 10px;
                 margin-top: 20px;
+                word-break: break-all;
             }
             .makan-minum{
                 display: flex;
@@ -113,6 +118,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 li{
                     font-size: 16px;
                     margin-left: 40px;
+                    word-break: break-all;
 
                     span{
                         margin-left: 10px;
@@ -130,6 +136,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 font-weight: 600;
                 margin-top: 30px;
                 margin-bottom: 10px;
+                word-break: break-all;
             }
             ul{
                 box-shadow: $shadowbox;
@@ -142,6 +149,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 li{
                     list-style: none;
                     margin-right: 20px;
+                    word-break: break-all;
                 }
             }
 
@@ -165,6 +173,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                 list-style: none;
 
                 li{
+                    word-break: break-all;
                     img{
                         width: 100%;
                         max-width: 400px;
@@ -281,10 +290,15 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                         font-size: 16px;
                         font-weight: 500;
                         border-bottom: solid 1px ;
+                        word-break: break-all;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
                     }
                     p{
                         margin-top: 10px;
-                        word-wrap: break-word;
+                        word-break: break-all;
                     }
                 }
 
