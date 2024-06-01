@@ -30,10 +30,38 @@ const Detail = {
       const apidetailkuliner = await EpicureanApiSource.wisatakulinerid(url.id);
 
       detailkontainer.innerHTML += detailplate(apidetailkuliner);
+      this._initReviewForm(url.id);
     } catch (error) {
       console.error('gagal melakukan fetch detail wisata kuliner:', error);
-      detailkontainer.innerHTML = '<p>Gagal menampilkan data pastikan terhubung koneksi internet  dan <span class="refresh" onclick="location.reload()">refresh</span> kembali   .</p>';
+      detailkontainer.innerHTML = '<p>Gagal menampilkan data, pastikan terhubung koneksi internet dan <span class="refresh" onclick="location.reload()">refresh</span> kembali.</p>';
     }
   },
+
+  _initReviewForm(id) {
+    const form = document.querySelector('.form-review-container');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const namaPengulas = form.name.value;
+      const ulasan = form.review.value;
+      const rating = form.rating.value;
+
+      const reviewData = {
+        nama_pengulas: namaPengulas,
+        ulasan,
+        rating,
+      };
+
+      try {
+        const response = await EpicureanApiSource.createReview(id, reviewData);
+        alert(response.message);
+        form.reset();
+      } catch (error) {
+        console.error('Gagal mengirim ulasan:', error);
+        alert('Gagal mengirim ulasan, silakan coba lagi.');
+      }
+    });
+  },
 };
+
 export default Detail;

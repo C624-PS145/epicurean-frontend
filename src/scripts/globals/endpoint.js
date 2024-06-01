@@ -10,6 +10,7 @@ const API_ENDPOINT = {
     if (kabupaten) url += `&kabupaten=${kabupaten}`;
     return url;
   },
+  CREATE_REVIEW: (id) => `${CONFIG.BASE_URL}detailwisatakuliner/${id}/ulasan`,
 };
 
 export default API_ENDPOINT;

@@ -18,6 +18,23 @@ class EpicureanApiSource {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async createReview(id, reviewData) {
+    const response = await fetch(API_ENDPOINT.CREATE_REVIEW(id), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(reviewData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 
 export default EpicureanApiSource;
