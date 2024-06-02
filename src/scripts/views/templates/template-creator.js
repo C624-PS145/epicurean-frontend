@@ -15,6 +15,17 @@ export const createStars = (rating) => {
   return stars;
 };
 
+const createWisataItemTemplate = (ieee) => `
+  <div class="wisata-item">
+    <img class="wisata-item__thumbnail" src="${ieee.pictureId}" alt="${ieee.name}">
+    <div class="wisata-item__content">
+      <h3 class="wisata-item__title"><a href="#/detail/${ieee.id}">${ieee.name}</a></h3>
+      <p class="wisata-item__description">${ieee.description}</p>
+    </div>
+
+  </div>
+`;
+
 const daftarpopuler = (populer) => `
 <article>
   <img src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
@@ -284,6 +295,18 @@ const detailplate = (detail) => `
 </section>            
 </div>`;
 
+const templatelikebutton = () => `
+  <button aria-label="suka restoran" id="likeButton" class="like">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const templateunlikebutton = () => `
+  <button aria-label="batal suka restoran" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
 export {
   daftarpopuler,
   daftartestimoni,
@@ -292,4 +315,7 @@ export {
   aboutplate,
   aboutmadura,
   detailplate,
+  createWisataItemTemplate,
+  templatelikebutton,
+  templateunlikebutton,
 };

@@ -721,7 +721,24 @@ $shadowbox: 0 4px 3px #af8b1631;
   
 
 
-
+.like{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $pc;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: $w;
+  cursor: pointer;
+}
 
 
 

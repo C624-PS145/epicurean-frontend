@@ -1,6 +1,12 @@
 import API_ENDPOINT from '../globals/endpoint';
 
 class EpicureanApiSource {
+  static async wisatakulinerall() {
+    const response = await fetch(API_ENDPOINT.LIST_ALL);
+    const responseJson = await response.json();
+    return responseJson;
+  }
+
   static async wisatakulinerpopuler() {
     const response = await fetch(API_ENDPOINT.POPULER);
     const responseJson = await response.json();
