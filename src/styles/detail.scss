@@ -7,7 +7,7 @@ $jlt : #222222;
 $ds: #555555;
 $bva:#E9F7F1;
 $bva2:#F4FBF8;
-$shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
+$shadowbox: 0 1px 3px rgba(0, 0, 0, 0.2);
 
 
 .detailers{
@@ -31,15 +31,17 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
         // ! Style Informasi wisata kuliner
         
         .informasidangambar{
-            display: flex;
+            display: grid;
+            grid-template-columns: auto auto;
+            flex-wrap: wrap;
+            column-gap: 50px;
             .detailgambar-kontainer{
-                margin-right: 7%;
                 img{
                     object-fit: cover;
                     border-radius: 30px;
                     box-shadow:$shadowbox;
-                    margin-right: 8%;
-
+                    max-width: 470px;
+                    width: 100%;
                     &:hover {
                         transform: scale(1.05);
                         transition: ease 0.5s;
@@ -50,7 +52,7 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
         
             div{
                 h2{
-                    font-size: 24px;
+                    font-size: 25px;
                     font-weight: 600;
                     color: $jlt;
                     word-break: break-all;
@@ -64,12 +66,19 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
                         color: $pc;
                         word-break: break-all;
                     }
+                   
+                }
+                .bintang{
+                    color: #ff701d;
+                     
+                    font-size: 26px;
                 }
                 
             }
 
             .pemesanan{
                 margin-top: 20px;
+                text-align: left;
 
                 img{
                     margin-top: 10px;
@@ -314,27 +323,70 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
 
 // ! Responsif
 
-@media screen and (min-width: 1200px){
+@media screen and (max-width: 1000px){
+    .detailers{
+        .informasi{
+            .informasidangambar{
+                grid-template-columns: auto;
 
-    .detailgambar-kontainer{
-        img{
-            max-width: 470px;
+                
+
+                .detailgambar-kontainer{
+                    text-align: center;
+                    margin-bottom: 10%;
+
+                    img{
+                        max-width: 60%;
+                        border-radius: 6px;
+                    }
+                }
+                
+            }
+
         }
+       
     }
-     
 }
-@media screen and (max-width: 1200px){
 
-    .detailgambar-kontainer{
-        img{
-            width: 100%;
-            max-width:none;
-            min-width: 250px;
-        }
+@media screen and (max-width: 978px){
+
+    .judula{
+        text-align: center;
+        
     }
-     
+    .detailers{
+        .informasi{
+            .informasidangambar{
+                grid-template-columns: auto;
+
+                .detailgambar-kontainer{
+                    text-align: center;
+                    margin-bottom: 10%;
+
+                    img{
+                        max-width: 60%;
+                        min-width: 250px;
+                    }
+                }
+                
+            }
+
+        }
+       
+    }
+    
 }
 @media screen and (max-width: 768px){
+
+    .informasi{
+        .informasidangambar{
+            div{
+                h2{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 
     .detailers{
         .form-group{
@@ -343,12 +395,13 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
             }
         }
         .label{
-            margin-top: 20px;
+            margin-top: 60px;
+            margin-bottom: 30px;
             justify-content: center;
             section{
                 h2{
                     color: $pc;
-                    font-size: 32px;
+                    font-size: 30px;
                 }
             }
         
@@ -359,27 +412,15 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
         margin-top: 20px;
         box-shadow: $shadowbox;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
         padding-left: 30px;
+        padding-top: 20px;
         padding-right: 30px;
         text-align: justify;
     }
 
 
-     .informasidangambar{
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-     }
 
-     .detailgambar-kontainer{
-        img{
-            width: 100%;
-            max-width:250px;
-            min-width: none;
-            margin-bottom: 30px;
-            margin-left: 30px;
-        }
-    }
+
 }
 

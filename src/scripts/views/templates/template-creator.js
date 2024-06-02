@@ -64,7 +64,7 @@ const searchkuliner = () => `
 const allkuliner = (searchfilter) => `
   <article>
     <img src="${searchfilter.gambar_katalog}">
-    <p class="lok"></p>
+    <p class="lok">${searchfilter.kabupaten}</p>
     <h3><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
     <p>${searchfilter.jam_operasional} <span>${createStars(searchfilter.rating_avg)}</span>${searchfilter.rating_avg}</p>
     <section>
@@ -177,18 +177,18 @@ const detailplate = (detail) => `
 <section class="informasidangambar">
 
     <div class="detailgambar-kontainer">
-      <img src="${detail.gambar_katalog}" alt="gambar wistaa kuliner">
+      <img src="${detail.gambar_katalog}" alt="gambar wisata kuliner">
     </div>
 
     <div>
-        <h2>${detail.nama_tempat}</h2>
-        <p>Alamat :${detail.alamat} </p>
+        <h2 class="judula">${detail.nama_tempat}</h2>
+        <p>Rating (${detail.rating_avg})</p>
+        <p> <span class="bintang">${createStars(detail.rating_avg)}</span></p>
+        <p>${detail.alamat} </p>
         <p>Kabupaten : <span> ${detail.kabupaten} </span></p>
-        
         <div class="deskripsi">
         <p>${detail.deskripsi}</p>
         </div>
-
         <section class="pemesanan">
             <p>informasi pemesanan (Whatsapp)</p>
             <a href="https://api.whatsapp.com/send?phone=62${detail.link_wa}">
