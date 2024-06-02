@@ -1,20 +1,18 @@
-// pages/favorites.js
 import FavoriteWisataIdb from '../../data/favoriteWisataIdb';
-import { createWisataItemTemplate } from '../templates/template-creator';
+import { daftarfavorit } from '../templates/template-creator';
 
 const Favorites = {
   async render() {
     return `
-
-       <article class="allkuliner">
+      <article class="daftar_favorit">
         <div class="label">
           <section>
-            <h2>Kuliner</h2>
-            <p>Temukan informasi wisata kuliner madura yang mungkin belum pernah anda coba</p>
+            <h2>Bookmark</h2>
+            <p>Berikut adalah daftar wisata kuliner yang anda sukai.</p>
           </section>
         </div>
         <div id="wisata-list" class="list-item"></div> 
-        </article>
+      </article>
     `;
   },
 
@@ -26,7 +24,13 @@ const Favorites = {
       wisataListContainer.innerHTML = '<p>Tidak ada wisata kuliner yang disukai.</p>';
     } else {
       wisata.forEach((item) => {
-        wisataListContainer.innerHTML += createWisataItemTemplate(item);
+        const wisataElement = document.createElement('div');
+        wisataElement.innerHTML = daftarfavorit(item);
+        wisataElement.querySelector('.remove-button').addEventListener('click', async () => {
+          await FavoriteWisataIdb.deletefavrest(item.id);
+          wisataElement.remove();
+        });
+        wisataListContainer.appendChild(wisataElement);
       });
     }
   },

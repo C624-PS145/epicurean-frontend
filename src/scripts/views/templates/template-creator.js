@@ -1,30 +1,6 @@
+import createStars from '../../utils/logikarating';
 // import CONFIG from '../../globals/configure';
 const { formatDistanceToNow } = require('date-fns');
-
-export const createStars = (rating) => {
-  const fullStars = Math.floor(rating);
-  const halfStars = rating % 1 >= 0.5 ? 1 : 0;
-  const emptyStars = 5 - fullStars - halfStars;
-
-  let stars = '★'.repeat(fullStars);
-  if (halfStars) {
-    stars += '<span class="half-star">★</span>';
-  }
-  stars += '☆'.repeat(emptyStars);
-
-  return stars;
-};
-
-const createWisataItemTemplate = (ieee) => `
-  <div class="wisata-item">
-    <img class="wisata-item__thumbnail" src="${ieee.pictureId}" alt="${ieee.name}">
-    <div class="wisata-item__content">
-      <h3 class="wisata-item__title"><a href="#/detail/${ieee.id}">${ieee.name}</a></h3>
-      <p class="wisata-item__description">${ieee.description}</p>
-    </div>
-
-  </div>
-`;
 
 const daftarpopuler = (populer) => `
 <article>
@@ -36,9 +12,22 @@ const daftarpopuler = (populer) => `
   <section>
   <p>${populer.deskripsi}</p>
   <div>
-    <button>
-    <a href="#/detail/${populer.id}">  Detail<span>→</span></a>
-    </button>
+    <button class="detail-button" data-id="${populer.id}">Detail<span>→</span></button>
+  </div>
+</section> 
+</article>`;
+
+const daftarfavorit = (wisata) => `
+<article>
+  <img src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
+  <p class="lok">${wisata.kabupaten}</p>
+  <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
+  <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span</p>
+  
+  <section>
+  <p>${wisata.deskripsi}</p>
+  <div>
+    <button class="remove-button">Delete</button>
   </div>
 </section> 
 </article>`;
@@ -76,14 +65,12 @@ const allkuliner = (searchfilter) => `
   <article>
     <img src="${searchfilter.gambar_katalog}">
     <p class="lok">${searchfilter.kabupaten}</p>
-    <h3><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
+    <h3>${searchfilter.nama_tempat}</h3>
     <p>${searchfilter.jam_operasional} <span>${createStars(searchfilter.rating_avg)}</span>${searchfilter.rating_avg}</p>
     <section>
       <p>${searchfilter.deskripsi}</p>
       <div>
-        <button>
-          <a href="#/detail/${searchfilter.id}">Detail<span>→</span></a>
-        </button>
+        <button class="detail-button" data-id="${searchfilter.id}">Detail<span>→</span></button>
       </div>
     </section> 
   </article>
@@ -315,7 +302,7 @@ export {
   aboutplate,
   aboutmadura,
   detailplate,
-  createWisataItemTemplate,
   templatelikebutton,
   templateunlikebutton,
+  daftarfavorit,
 };

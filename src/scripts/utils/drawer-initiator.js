@@ -11,7 +11,7 @@ const Inisiatordrawer = {
     });
 
     skip.addEventListener('click', () => {
-      const mainElement = document.getElementById('main');
+      const mainElement = document.getElementById('populer');
       if (mainElement) {
         mainElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         const firstFocusableElement = mainElement.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');

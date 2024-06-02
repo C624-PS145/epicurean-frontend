@@ -1,0 +1,101 @@
+.abouters {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.abouters .label {
+  justify-content: center;
+}
+.abouters .label section h2 {
+  color: #24AB70;
+  font-size: 48px;
+}
+.abouters .developer h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.abouters .developer .developer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.abouters .developer .developer-container img {
+  max-width: 150px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+.abouters .developer .developer-container h3 {
+  font-size: 23px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+.abouters .developer .developer-container .agtdev {
+  text-align: center;
+  background-color: #DEDEDE;
+  min-height: 432px;
+  padding: 30px;
+  width: 290px;
+  border-radius: 35px;
+}
+.abouters .developer .developer-container .agtdev .github {
+  margin-top: 50px;
+}
+.abouters .developer .developer-container .agtdev .github img {
+  max-width: 40px;
+}
+.abouters .visi-misi {
+  border: 1px solid #000000;
+  margin-top: 100px;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 80%;
+}
+.abouters .visi-misi h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.abouters .visi-misi-container {
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.abouters .visi-misi-container .visi h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.abouters .visi-misi-container .visi ul {
+  list-style: none;
+}
+.abouters .visi-misi-container .visi ul li {
+  font-size: 14px;
+  margin-right: 30px;
+}
+.abouters .visi-misi-container .misi h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.abouters .visi-misi-container .misi ul {
+  list-style: none;
+}
+.abouters .visi-misi-container .misi ul li {
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .abouters .agtdev {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .abouters .abouters .label section h2 {
+    font-size: 32px;
+  }
+  .abouters .visi-misi-container {
+    grid-template-columns: 1fr;
+  }
+  .abouters .visi-misi-container .misi h3 {
+    margin-top: 10px;
+  }
+}/*# sourceMappingURL=about.css.map */

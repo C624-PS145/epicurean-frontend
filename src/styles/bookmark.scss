@@ -1,0 +1,166 @@
+$txt: #353535;
+$pc: #24AB70;
+$txt2:#000000;
+$w:#ffff;
+$bgl:#FAFAFA;
+$jlt : #222222;
+$ds: #555555;
+$bva:#E9F7F1;
+$bva2:#F4FBF8;
+$shadowbox: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+
+.daftar_favorit{
+
+    .list-item{
+        margin-top: 70px;
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-around;
+        article{
+          border-radius: 16px;
+          padding: 30px;
+          max-width: 411px;
+          
+          img{
+            max-width: 150px;
+            max-height: 150px;
+            width: 300;
+            height: 207px;
+            object-fit: cover;
+            border-radius: 100px;
+            margin-bottom: 30px;
+            transition: transform 0.4s ease-in-out;
+          }
+          
+          img:hover {
+              transform: scale(1.05);
+          }
+          .lok{
+            color: $pc;
+            word-break: break-all;
+          }
+          p{
+            word-break: break-all;
+            span{
+              font-size: 23px;
+              color: #ff701d;
+              margin-left: 10px;
+              margin-right: 10px;
+            }
+          }
+          
+          h3{
+            a{
+              font-size: 24px;
+              font-weight:600;
+              color: $jlt;
+              word-break: break-all;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          }
+          section{
+            margin-top: 10px;
+            p{
+              color:$ds;
+              text-align: justify;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              word-break: break-all;
+            }
+            div{
+              display: flex;
+              justify-content:end;
+              margin-top: 20px;
+              button{
+                a{
+                  font-size: 16px;
+                  color: $w;
+                }
+                text-align: center;
+                margin-top: 15px;
+                background: $pc;
+                border: none;
+                padding-left: 10px;
+                padding-right: 5px;
+                padding-bottom: 3px;
+                border-radius: 35px;
+                width: 90px;
+                span{
+                  font-size: 24px;
+                }
+                &:hover {
+                  background-color: $txt; 
+                }
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+              }
+            }
+          }
+        }
+      }
+}
+
+
+
+
+// ! Responsif
+@media screen and (max-width: 1400px){
+    .daftar_favorit{
+        .list-item{
+            grid-template-columns: auto auto;
+            justify-content: center;
+        }
+
+        .label{
+            section{
+                h2{
+                    font-size: 28px;
+
+                }
+
+                p{
+                  text-align: justify;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .daftar_favorit{
+        .list-item{
+            grid-template-columns: auto ;
+            gap: 70px;
+            article{
+              box-shadow: none;
+              h3{
+                a{
+                  font-size: 20px;
+                }
+              }
+              p{
+                font-size: 12px;
+              }
+              section{
+                div{
+                  button{
+                    font-size: 13px;
+                    span{
+                      font-size: 20px;
+                    }
+                  }
+                }
+              }
+            }
+        }
+    }
+}

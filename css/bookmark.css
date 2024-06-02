@@ -1,0 +1,16 @@
+.bookmarkwisatakuliner .label section h2 {
+  color: #24AB70;
+  font-size: 48px;
+}
+.bookmarkwisatakuliner .wisata-list ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.bookmarkwisatakuliner .wisata-list ul img {
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+  object-fit: cover;
+}/*# sourceMappingURL=bookmark.css.map */

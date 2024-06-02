@@ -5,7 +5,7 @@ const Home = {
   async render() {
     return `
     <jumbo-tron class="jumbotron"></jumbo-tron>
-    <article class="populer">
+    <article id="populer" class="populer">
       <div class="label">
         <section>
           <h2>Wisata kuliner terpopuler</h2>
@@ -54,6 +54,15 @@ const Home = {
       const daftarKuliner2 = await EpicureanApiSource.reviewterbarudanterbaik();
       daftarKuliner2.forEach((kuliner) => {
         kontainerbestreview.innerHTML += daftartestimoni(kuliner);
+      });
+
+      const detailButtons = document.querySelectorAll('.detail-button');
+      detailButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const { id } = button.dataset;
+          // Navigasi ke halaman detail
+          window.location.href = `#/detail/${id}`;
+        });
       });
     } catch (error) {
       console.error('gagal melakukan fetch wisata kuliner:', error);

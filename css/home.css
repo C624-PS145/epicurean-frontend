@@ -1,0 +1,628 @@
+#button1 {
+  background-color: #24AB70;
+}
+
+#button2 {
+  background-color: #FF5733;
+}
+
+#button3 {
+  background-color: #3498DB;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.cs_skip {
+  display: none;
+}
+
+main {
+  margin-bottom: 200px;
+  max-width: 1440px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+header {
+  display: flex;
+  max-width: 1440px;
+  width: 90%;
+  justify-content: space-between;
+  padding-top: 30px;
+  align-items: center;
+}
+header img {
+  max-width: 300px;
+  margin-right: 5%;
+}
+header nav button {
+  font-size: 22px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #24AB70;
+  color: white;
+  box-shadow: 0 4px 3px rgba(175, 139, 22, 0.1921568627);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+header nav button:hover {
+  background-color: #353535;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li a {
+  padding: 20px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #24AB70;
+}
+
+.jumbotron {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.jumbotron section h1 {
+  font-size: 42px;
+  color: #353535;
+}
+.jumbotron section h1 span {
+  color: #24AB70;
+}
+.jumbotron section p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #353535;
+}
+.jumbotron section button {
+  padding: 10px;
+  border-radius: 10px;
+  width: 165px;
+  height: 50px;
+  background-color: #24AB70;
+  color: white;
+  font-size: 18px;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.jumbotron section button:hover {
+  background-color: #353535;
+}
+.jumbotron figure img {
+  max-width: 540px;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.jumbotron figure img:hover {
+  transform: scale(1.08);
+}
+
+.label {
+  margin-bottom: 50px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 95%;
+}
+.label h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #353535;
+}
+.label p {
+  color: #555555;
+  margin-top: 10px;
+  max-width: 600px;
+}
+.label button {
+  margin-left: 100px;
+  font-size: 16px;
+  width: 109px;
+  height: 40px;
+  border-radius: 280px;
+  border: none;
+  background-color: #E9F7F1;
+  color: #24AB70;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.label button:hover {
+  background-color: #353535;
+}
+
+.populer .list-item {
+  margin-top: 70px;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+}
+.populer .list-item article {
+  box-shadow: 0 4px 3px rgba(175, 139, 22, 0.1921568627);
+  border-radius: 16px;
+  background-color: #FAFAFA;
+  padding: 30px;
+  max-width: 411px;
+  display: flex;
+  flex-direction: column;
+}
+.populer .list-item article img {
+  max-width: 346px;
+  width: 100%;
+  height: 207px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease-in-out;
+}
+.populer .list-item article img:hover {
+  transform: scale(1.05);
+}
+.populer .list-item article .lok {
+  color: #24AB70;
+  word-break: break-all;
+}
+.populer .list-item article p {
+  word-break: break-all;
+}
+.populer .list-item article p span {
+  font-size: 23px;
+  color: #ff701d;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.populer .list-item article h3 a {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222222;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.populer .list-item article section {
+  margin-top: 10px;
+}
+.populer .list-item article section p {
+  color: #555555;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+.populer .list-item article section div {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+.populer .list-item article section div button {
+  text-align: center;
+  margin-top: 15px;
+  background: #24AB70;
+  border: none;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+  border-radius: 35px;
+  width: 90px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.populer .list-item article section div button a {
+  font-size: 16px;
+  color: white;
+}
+.populer .list-item article section div button span {
+  font-size: 24px;
+}
+.populer .list-item article section div button:hover {
+  background-color: #353535;
+}
+
+.testimoni .label {
+  justify-content: end;
+  text-align: end;
+}
+.testimoni .list-item2 {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.testimoni .list-item2 article {
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 411px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimoni .list-item2 article img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100px;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease-in-out;
+}
+.testimoni .list-item2 article img:hover {
+  transform: scale(1.05);
+}
+.testimoni .list-item2 article .tgltesti {
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.testimoni .list-item2 article h3 a {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222222;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.testimoni .list-item2 article p span {
+  font-size: 23px;
+  color: #ff701d;
+}
+.testimoni .list-item2 article section {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.testimoni .list-item2 article section h4 {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 500;
+  word-break: break-all;
+  border-bottom: solid #555555 2px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.testimoni .list-item2 article section p {
+  color: #222222;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: justify;
+}
+.testimoni .list-item2 article section span p {
+  margin-top: 10px;
+  color: #555555;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.aboutmadura {
+  margin: 0% 5% 0% 5%;
+}
+.aboutmadura .label {
+  justify-content: center;
+}
+.aboutmadura article {
+  box-shadow: 0 4px 3px rgba(175, 139, 22, 0.1921568627);
+  border-radius: 16px;
+  background-color: #FAFAFA;
+}
+.aboutmadura article div {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutmadura article div section {
+  padding: 50px;
+  padding-left: 100px;
+  max-width: 730px;
+}
+.aboutmadura article div section div {
+  flex-direction: column;
+}
+.aboutmadura article div section p {
+  font-size: 16px;
+  color: #555555;
+  text-align: justify;
+}
+.aboutmadura article div section h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #222222;
+  font-weight: 500;
+}
+.aboutmadura article div figure img {
+  transition: transform 0.4s ease-in-out;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  object-fit: cover;
+  height: 400px;
+  max-width: 500px;
+}
+.aboutmadura article div figure img:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1400px) {
+  .jumbotron figure {
+    margin-top: 60px;
+  }
+  .populer .label {
+    justify-content: space-evenly;
+  }
+  .populer .list-item {
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .testimoni .label {
+    width: 87%;
+  }
+  .testimoni .list-item2 {
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .aboutmadura article div {
+    align-items: center;
+  }
+  .aboutmadura article div section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .aboutmadura article div section div {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .aboutmadura article div figure {
+    padding-right: 80px;
+  }
+  .aboutmadura article div figure img {
+    max-width: 300px;
+    height: 250px;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 1302px) {
+  .jumbotron figure img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 950px) {
+  main {
+    width: 80%;
+  }
+  .aboutmadura article div {
+    flex-direction: column;
+  }
+  .aboutmadura article div section {
+    padding-left: 50px;
+  }
+  .aboutmadura article div figure {
+    display: none;
+  }
+  .populer .label {
+    margin-bottom: 0px;
+  }
+  .populer .label button {
+    margin-top: 30px;
+  }
+  .populer .list-item {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 767px) {
+  header nav button {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .skat {
+    height: 20vmin;
+  }
+  header {
+    position: fixed;
+    background-color: white;
+    justify-content: space-between;
+    padding-bottom: 35px;
+  }
+  header img {
+    width: 70%;
+  }
+  header nav ul li {
+    display: none;
+  }
+  .open {
+    display: flex;
+    margin-top: 8vmin;
+    left: 0%;
+    transition: background-color 0.3s linear;
+    z-index: 9;
+    position: fixed;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    padding-top: 20px;
+    height: 300vh;
+    width: 100%;
+    align-items: center;
+  }
+  .open li {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10vmin;
+    display: flex;
+  }
+  .open li a {
+    padding: 10px;
+  }
+  .open li:hover {
+    background-color: #24AB70;
+    border-radius: 3px;
+    transition: background-color 0.3s linear;
+  }
+  .open li:hover a {
+    color: white;
+  }
+  .jumbotron figure img {
+    width: 85%;
+  }
+  .jumbotron section h1 {
+    font-size: 30px;
+  }
+  .jumbotron section p {
+    font-size: 13px;
+  }
+  .jumbotron section button {
+    width: 100px;
+    max-height: 35px;
+    font-size: 14px;
+  }
+  .jumbotron figure {
+    margin-top: 60px;
+  }
+  .label {
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .label button {
+    margin-right: 100px;
+  }
+  .label section h2 {
+    font-size: 28px;
+  }
+  .label section p {
+    font-size: 13px;
+  }
+  .populer .list-item {
+    grid-template-columns: auto;
+    gap: 70px;
+  }
+  .populer .list-item article {
+    box-shadow: none;
+  }
+  .populer .list-item article h3 a {
+    font-size: 20px;
+  }
+  .populer .list-item article p {
+    font-size: 12px;
+  }
+  .populer .list-item article section div button {
+    font-size: 13px;
+  }
+  .populer .list-item article section div button span {
+    font-size: 20px;
+  }
+  .testimoni .label {
+    width: 100%;
+  }
+  .testimoni .list-item2 {
+    gap: 50px;
+    grid-template-columns: auto;
+  }
+  .testimoni .list-item2 article {
+    box-shadow: none;
+  }
+  .testimoni .list-item2 article h3 a {
+    font-size: 20px;
+  }
+  .testimoni .list-item2 article section span p {
+    font-size: 13px;
+  }
+  .aboutmadura article {
+    box-shadow: none;
+  }
+  .aboutmadura article div section {
+    padding-left: 50px;
+  }
+  .aboutmadura article div section p {
+    font-size: 13px;
+  }
+  .aboutmadura article div section div h3 {
+    font-size: 16px;
+  }
+  .aboutmadura article div section div p {
+    font-size: 13px;
+  }
+}
+.like {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #24AB70;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.loadingsignal {
+  margin-bottom: 400px;
+  margin-left: 50%;
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #24AB70;
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0, calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px, calc(0 * var(--d)) calc(1 * var(--d)) 0 2px, calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px, calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px, calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px, calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
+  animation: l27 1s infinite steps(8);
+}
+
+@keyframes l27 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.toggleback {
+  margin-top: 100px;
+  background-color: #24AB70;
+  display: flex;
+  width: max-content;
+  padding: 2px 20px 2px 20px;
+  border-radius: 35px;
+}
+.toggleback:hover {
+  background-color: #353535;
+}
+.toggleback a {
+  font-size: 16px;
+  color: white;
+}
+.toggleback a span {
+  font-size: 20px;
+}/*# sourceMappingURL=home.css.map */

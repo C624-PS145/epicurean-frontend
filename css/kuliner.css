@@ -1,0 +1,199 @@
+.allkuliner .label {
+  justify-content: center;
+}
+.allkuliner .label section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.allkuliner .label section h2 {
+  color: #24AB70;
+  font-size: 48px;
+}
+.allkuliner .label section p {
+  font-size: 18px;
+  text-align: center;
+}
+.allkuliner .searchkuliner form {
+  display: flex;
+  justify-content: center;
+}
+.allkuliner .searchkuliner form input {
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.158);
+  background-color: #F6FCF9;
+  border: none;
+  height: 35px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+.allkuliner .searchkuliner form div {
+  display: flex;
+}
+.allkuliner .searchkuliner form div button {
+  background: none;
+  border: none;
+  font-size: 34px;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 35px;
+  max-width: 40px;
+}
+.allkuliner .searchkuliner form div button:hover {
+  transform: scale(1.1);
+}
+.allkuliner .searchkuliner form div select {
+  max-width: 100px;
+  cursor: pointer;
+  border: none;
+  height: 35px;
+  background-color: #F6FCF9;
+  border-radius: 10px;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.158);
+}
+.allkuliner .list-item {
+  margin-top: 70px;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+}
+.allkuliner .list-item article {
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.158);
+  border-radius: 16px;
+  background-color: #FAFAFA;
+  padding: 30px;
+  max-width: 411px;
+  display: flex;
+  flex-direction: column;
+}
+.allkuliner .list-item article img {
+  max-width: 346px;
+  width: 100%;
+  height: 207px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease-in-out;
+}
+.allkuliner .list-item article img:hover {
+  transform: scale(1.05);
+}
+.allkuliner .list-item article .lok {
+  color: #24AB70;
+  word-break: break-all;
+}
+.allkuliner .list-item article p {
+  word-break: break-all;
+}
+.allkuliner .list-item article p span {
+  font-size: 23px;
+  color: #ff701d;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.allkuliner .list-item article h3 a {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222222;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.allkuliner .list-item article section {
+  margin-top: 10px;
+}
+.allkuliner .list-item article section p {
+  color: #555555;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+.allkuliner .list-item article section div {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+.allkuliner .list-item article section div button {
+  text-align: center;
+  margin-top: 15px;
+  background: #24AB70;
+  border: none;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+  border-radius: 35px;
+  width: 90px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.allkuliner .list-item article section div button a {
+  font-size: 16px;
+  color: white;
+}
+.allkuliner .list-item article section div button span {
+  font-size: 24px;
+}
+.allkuliner .list-item article section div button:hover {
+  background-color: #353535;
+}
+
+@media screen and (max-width: 1400px) {
+  .allkuliner .list-item {
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  .allkuliner .label section h2 {
+    font-size: 28px;
+  }
+  .allkuliner .label section p {
+    text-align: justify;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .searchkuliner form {
+    margin-right: 50px;
+    flex-direction: column;
+  }
+  .searchkuliner form input {
+    margin-bottom: 30px;
+  }
+  .searchkuliner form div {
+    margin-left: 10px;
+  }
+  .toggleback a {
+    font-size: 13px;
+  }
+  .allkuliner .list-item {
+    grid-template-columns: auto;
+    gap: 70px;
+  }
+  .allkuliner .list-item article {
+    box-shadow: none;
+  }
+  .allkuliner .list-item article h3 a {
+    font-size: 20px;
+  }
+  .allkuliner .list-item article p {
+    font-size: 12px;
+  }
+  .allkuliner .list-item article section div button {
+    font-size: 13px;
+  }
+  .allkuliner .list-item article section div button span {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=kuliner.css.map */

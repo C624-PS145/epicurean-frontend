@@ -48,6 +48,7 @@ const Detail = {
           kabupaten: apidetailkuliner.kabupaten,
           rating_avg: apidetailkuliner.rating_avg,
           jam_operasional: apidetailkuliner.jam_operasional,
+          deskripsi: apidetailkuliner.deskripsi,
           fav: true,
           icon: 'fa fa-bookmark',
         },
