@@ -228,9 +228,10 @@ const detailplate = (detail) => `
 <section class="galeri">
 <h2>Galeri</h2>
     <ul>
-        <li><img src="${detail.galeri1}" alt="gambar1"></li>
-        <li><img src="${detail.galeri2}" alt="gambar2"></li>
-        <li><img src="${detail.galeri3}" alt="gambar3"></li>
+        <li><img src="${detail.galeri1}" alt="galeri1"></li>
+        <li><img src="${detail.galeri2}" alt="galeri2"></li>
+        <li><img src="${detail.galeri3}" alt="galeri3"></li>
+        <li><img src="${detail.galeri4}" alt="galeri4"></li>
     </ul>
 </section>
 
