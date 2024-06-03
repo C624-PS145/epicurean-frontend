@@ -55,6 +55,7 @@ const Pagekuliner = {
         allkulinerContainer.innerHTML = '<p>Gagal melakukan pencarian. Pastikan koneksi internet dan coba lagi.</p>';
       } finally {
         loadingElement.style.display = 'none';
+        this._addDetailButtonListeners();
       }
     });
 
@@ -64,21 +65,23 @@ const Pagekuliner = {
       defaultKuliner.forEach((kuliner) => {
         allkulinerContainer.innerHTML += allkuliner(kuliner);
       });
-
-      const detailButtons = document.querySelectorAll('.detail-button');
-      detailButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const { id } = button.dataset;
-          // Navigasi ke halaman detail
-          window.location.href = `#/detail/${id}`;
-        });
-      });
     } catch (error) {
       console.error('Gagal melakukan fetch kuliner:', error);
       allkulinerContainer.innerHTML = '<p>Gagal menampilkan data. Pastikan terhubung koneksi internet dan <span class="refresh" onclick="location.reload()">refresh</span> kembali.</p>';
     } finally {
       loadingElement.style.display = 'none';
+      this._addDetailButtonListeners();
     }
+  },
+
+  _addDetailButtonListeners() {
+    const detailButtons = document.querySelectorAll('.detail-button');
+    detailButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const id = event.currentTarget.getAttribute('data-id');
+        window.location.hash = `#/detail/${id}`;
+      });
+    });
   },
 };
 
