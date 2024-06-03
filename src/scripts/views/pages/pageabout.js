@@ -4,8 +4,8 @@ const About = {
   async render() {
     return `
     <div class="toggleback">
-        <a id="back-button" href="#"> <span>←</span> Kembali </a>
-    </div>
+         <a id="back-button" href="#"><i class="gg-arrow-left-o"></i>Kembali</a>
+      </div>
 
     <div class="abouters" id ="abouters">
 
