@@ -4,11 +4,9 @@ import { daftarfavorit } from '../templates/template-creator';
 const Favorites = {
   async render() {
     return `
-
-    <div class="toggleback">
+      <div class="toggleback">
         <a id="back-button" href="#"><i class="gg-arrow-left-o"></i>Kembali</a>
       </div>
-      
       <article class="daftar_favorit">
         <div class="label">
           <section>
@@ -31,10 +29,18 @@ const Favorites = {
       wisata.forEach((item) => {
         const wisataElement = document.createElement('div');
         wisataElement.innerHTML = daftarfavorit(item);
+
+        // Add event listener for remove button
         wisataElement.querySelector('.remove-button').addEventListener('click', async () => {
           await FavoriteWisataIdb.deletefavrest(item.id);
           wisataElement.remove();
         });
+
+        // Add event listener for detail button
+        wisataElement.querySelector('.detail-button').addEventListener('click', () => {
+          window.location.hash = `#/detail/${item.id}`;
+        });
+
         wisataListContainer.appendChild(wisataElement);
       });
     }

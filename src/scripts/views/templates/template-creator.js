@@ -18,23 +18,19 @@ const daftarpopuler = (populer) => `
 </article>`;
 
 const daftarfavorit = (wisata) => `
-<article>
-  
-  <div class="perbutonan">
-  <button class="remove-button"><i class="gg-close-r"></i></button>
-  <button class="detail-button" data-id="${wisata.id}"><i class="gg-arrow-top-right-r"></i></button>
-  </div>
-
-
-  <img src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
-  <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
-  <p class="lok">${wisata.kabupaten}</p>
-  <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span</p>
-  
-  <section>
-  <p>${wisata.deskripsi}</p>
-  </section> 
-</article>`;
+  <article>
+    <div class="perbutonan">
+      <button class="remove-button"><i class="gg-close-r"></i></button>
+      <button class="detail-button" data-id="${wisata.id}"><i class="gg-arrow-top-right-r"></i></button>
+    </div>
+    <img src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
+    <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
+    <p class="lok">${wisata.kabupaten}</p>
+    <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span></p>
+    <section>
+      <p>${wisata.deskripsi}</p>
+    </section> 
+  </article>`;
 
 const daftartestimoni = (testimoni) => `
 <article>
@@ -274,7 +270,7 @@ const detailplate = (detail) => `
             <div class="judul">
                 <h4>${review.nama_pengulas}</h4>
                 <p>${formatDistanceToNow(new Date(review.tanggal))}</p>
-                <p>${review.rating}</p>
+                <p><span>${createStars(review.rating)}</span></p>
             </div>
             <section class="review">
                 <p>${review.ulasan}</p>
