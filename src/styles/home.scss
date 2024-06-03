@@ -8,7 +8,9 @@ $ds: #555555;
 $bva:#E9F7F1;
 $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.075);
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 
 *{
