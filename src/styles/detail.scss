@@ -13,6 +13,7 @@ $shadowbox: 0 1px 3px rgba(0, 0, 0, 0.2);
 .detailers{
     
     .label{
+        margin-top: 40px;
         justify-content: center;
         section{
             h2{
@@ -66,6 +67,8 @@ $shadowbox: 0 1px 3px rgba(0, 0, 0, 0.2);
                     span{
                         color: $pc;
                         word-break: break-all;
+                        margin-left: 10px;
+                        margin-right: 5px;
                     }
                    
                 }

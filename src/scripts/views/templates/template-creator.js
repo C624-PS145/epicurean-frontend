@@ -7,29 +7,33 @@ const daftarpopuler = (populer) => `
   <img src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
   <p class="lok">${populer.kabupaten}</p>
   <h3><a href="#/detail/${populer.id}">${populer.nama_tempat}</a></h3>
-  <p>${populer.jam_operasional} <span>${createStars(populer.rating_avg)}</span</p>
-  
+  <p>${populer.jam_operasional} <span>${createStars(populer.rating_avg)}</span>${populer.rating_avg}</p>
+
   <section>
   <p>${populer.deskripsi}</p>
   <div>
-    <button class="detail-button" data-id="${populer.id}">Detail<span>→</span></button>
-  </div>
+    <button class="detail-button" data-id="${populer.id}">Detail<span><i class="gg-arrow-right"></i></span></button>
+  </div> 
 </section> 
 </article>`;
 
 const daftarfavorit = (wisata) => `
 <article>
+  
+  <div class="perbutonan">
+  <button class="remove-button"><i class="gg-close-r"></i></button>
+  <button class="detail-button" data-id="${wisata.id}"><i class="gg-arrow-top-right-r"></i></button>
+  </div>
+
+
   <img src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
-  <p class="lok">${wisata.kabupaten}</p>
   <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
+  <p class="lok">${wisata.kabupaten}</p>
   <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span</p>
   
   <section>
   <p>${wisata.deskripsi}</p>
-  <div>
-    <button class="remove-button">Delete</button>
-  </div>
-</section> 
+  </section> 
 </article>`;
 
 const daftartestimoni = (testimoni) => `
@@ -65,12 +69,12 @@ const allkuliner = (searchfilter) => `
   <article>
     <img src="${searchfilter.gambar_katalog}">
     <p class="lok">${searchfilter.kabupaten}</p>
-    <h3>${searchfilter.nama_tempat}</h3>
+    <h3><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
     <p>${searchfilter.jam_operasional} <span>${createStars(searchfilter.rating_avg)}</span>${searchfilter.rating_avg}</p>
     <section>
       <p>${searchfilter.deskripsi}</p>
       <div>
-        <button class="detail-button" data-id="${searchfilter.id}">Detail<span>→</span></button>
+        <button class="detail-button" data-id="${searchfilter.id}">Detail<span><i class="gg-arrow-right"></i></span></button>
       </div>
     </section> 
   </article>
@@ -180,8 +184,7 @@ const detailplate = (detail) => `
 
     <div>
         <h2 class="judula">${detail.nama_tempat}</h2>
-        <p>Rating (${detail.rating_avg})</p>
-        <p> <span class="bintang">${createStars(detail.rating_avg)}</span></p>
+        <p> Rating<span class="bintang">${createStars(detail.rating_avg)}</span>(${detail.rating_avg})</p>
         <p>${detail.alamat} </p>
         <p>Kabupaten : <span> ${detail.kabupaten} </span></p>
         <div class="deskripsi">

@@ -4,6 +4,11 @@ import { daftarfavorit } from '../templates/template-creator';
 const Favorites = {
   async render() {
     return `
+
+    <div class="toggleback">
+        <a id="back-button" href="#"><i class="gg-arrow-left-o"></i>Kembali</a>
+      </div>
+      
       <article class="daftar_favorit">
         <div class="label">
           <section>

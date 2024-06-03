@@ -6,20 +6,10 @@ $bgl:#FAFAFA;
 $jlt : #222222;
 $ds: #555555;
 $bva:#E9F7F1;
-$shadowbox: 0 4px 3px #af8b1631;
+$shadowbox: 0 4px 3px rgba(0, 0, 0, 0.075);
 
 
-#button1 {
-  background-color: #24AB70;
-}
 
-#button2 {
-  background-color: #FF5733;
-}
-
-#button3 {
-  background-color: #3498DB;
-}
 
 *{
     padding: 0;
@@ -62,6 +52,7 @@ $shadowbox: 0 4px 3px #af8b1631;
       margin-right: 5%;
     }
     align-items:center ;
+    z-index: 10;
 
     nav{
       button{
@@ -162,17 +153,21 @@ $shadowbox: 0 4px 3px #af8b1631;
       max-width: 600px;
     }
     button{
+      display: flex;
       margin-left: 100px;
       font-size: 16px;
-      width: 109px;
-      height: 40px;
-      border-radius: 280px;
+      border-radius: 0px;
       border: none;
-      background-color: $bva;
+      background-color: $w;
       color: $pc;
+      padding: 10px;
       cursor: pointer;
+      border-radius: 16px;
+      i{
+        margin-left: 10px;
+      }
       &:hover {
-        background-color: $txt; 
+        background-color: $bva; 
       }
       transition: background-color 0.3s ease;
       
@@ -250,22 +245,17 @@ $shadowbox: 0 4px 3px #af8b1631;
             justify-content:end;
             margin-top: 20px;
             button{
+              display: flex;
+              align-items: center;
               font-size: 16px;
               color: $w;
-              text-align: center;
               margin-top: 15px;
               background: $pc;
               border: none;
-              padding-left: 10px;
-              padding-right: 5px;
-              padding-bottom: 3px;
-              border-radius: 35px;
-              width: 90px;
-              span{
-                font-size: 24px;
-              }
+              padding:5px 10px;
+              border-radius: 20px;
               &:hover {
-                background-color: $txt; 
+                background-color: #222222;
               }
               cursor: pointer;
               transition: background-color 0.3s ease;
@@ -303,7 +293,7 @@ $shadowbox: 0 4px 3px #af8b1631;
           object-fit: cover;
           border-radius: 100px;
           margin-bottom: 30px;
-          transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease;
         }
         img:hover {
           transform: scale(1.05);
@@ -322,6 +312,11 @@ $shadowbox: 0 4px 3px #af8b1631;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            transition: ease 0.3s;
+
+            &:hover{
+              transform: scale(1.05);
+            }
           }
         }
 
@@ -772,24 +767,116 @@ $shadowbox: 0 4px 3px #af8b1631;
 
   .toggleback{
     margin-top: 100px;
-    background-color: $pc;
-    display: flex;
-    width: max-content;
-    padding: 2px 20px 2px 20px;
-    border-radius: 35px;
-
-    &:hover {
-      background-color: $txt; 
-    }
+    background-color: $w;
 
     a{
-      font-size: 16px;
-      color: $w;
-      span{
-        font-size: 20px;
+      width: max-content;
+      padding: 7px;
+      border-radius: 10px;
+        
+    &:hover {
+      background-color: $bva;
+    }
+      display: flex;
+      color: $pc;
+      i{
+        margin-right: 10px;
       }
     }
   }
 
 
-  
+
+
+.gg-details-more {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 20px;
+  height: 14px;
+  border: 2px solid transparent
+}
+.gg-details-more::after,
+.gg-details-more::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  height: 2px;
+  border-radius: 3px;
+  background: currentColor
+}
+.gg-details-more::before {
+  box-shadow: 0 4px 0 0;
+  top: 0;
+  width: 16px
+}
+.gg-details-more::after {
+  width: 10px;
+  bottom: 0
+}
+
+.gg-arrow-left-o {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  transform: scale(var(--ggs,1));
+  border-radius: 22px
+}
+.gg-arrow-left-o::after,
+.gg-arrow-left-o::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 4px
+}
+.gg-arrow-left-o::after {
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  bottom: 6px
+}
+.gg-arrow-left-o::before {
+  width: 10px;
+  height: 2px;
+  bottom: 8px;
+  background: currentColor
+}
+
+.gg-arrow-right {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px
+}
+.gg-arrow-right::after,
+.gg-arrow-right::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  right: 3px
+}
+.gg-arrow-right::after {
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  bottom: 7px
+}
+.gg-arrow-right::before {
+  width: 16px;
+  height: 2px;
+  bottom: 10px;
+  background: currentColor
+}

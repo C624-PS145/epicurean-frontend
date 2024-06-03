@@ -13,7 +13,7 @@ const Home = {
           Berikut adalah tiga wisata kuliner terpopuler di Madura yang paling disukai oleh para pecinta kuliner.
           </p>
         </section>
-      <button id="viewAllButton" >View All</button>
+      <button id="viewAllButton" >View All <i class="gg-details-more"></i></button>
       </div>
       <div id="dafpop" class="list-item"></div> 
     </article>
