@@ -34,7 +34,24 @@ const Inisiatordrawer = {
         window.scrollTo(0, 0);
         setTimeout(() => {
           window.location.href = href;
-        }, 100); // Add slight delay if needed
+        }, 200); // Add slight delay if needed
+      });
+    });
+
+    const specificIds = ['populer', 'testimoni', 'abouters'];
+
+    document.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const href = link.getAttribute('href');
+        window.scrollTo(0, 0);
+        if (specificIds.includes(link.id)) {
+          setTimeout(() => {
+            window.location.href = href;
+          }, 590);
+        } else {
+          window.location.href = href;
+        }
       });
     });
 

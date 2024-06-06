@@ -80,12 +80,12 @@ const aboutmadura = `
 
 <div class="label">
     <section>
-        <h2>About Madura</h2>
+        <h2 id="aboutmad">About Madura</h2>
     </section>
 </div>
 <article>
     <div>
-    <section id="madure">
+    <section>
         <p>Dari sisi kuliner, Madura adalah surga bagi pecinta makanan. 
             Dengan kekayaan bahan-bahan alami dan rempah-rempah, setiap hidangan Madura menghadirkan kelezatan yang tidak terlupakan. Dari sate kambing Madura yang terkenal hingga bebek panggang dan sop ikan, setiap gigitan adalah 
             sebuah petualangan kuliner yang memanjakan lidah Anda dengan citarasa yang otentik dan memikat hati siapa pun yang mencicipinya. Selamat menelusuri

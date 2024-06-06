@@ -19,7 +19,7 @@ const Home = {
     </article>
     <div id="loading" class="loadingsignal"></div> 
 
-    <article class="testimoni">
+    <article id="reviewnews" class="testimoni">
       <div class="label">
         <section>
           <h2>Review Terbaru</h2>
