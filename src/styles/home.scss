@@ -27,8 +27,17 @@ html {
     align-items: center;
     overflow-x: hidden;
   }
-  .cs_skip{
-    display: none;
+  .skiper {
+    position: absolute;
+    color: #000000;
+    top: -60px;
+    background-color: #ffffff00;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    &:focus {
+      top: 50px;
+    }
   }
   main{
     margin-bottom: 200px;
