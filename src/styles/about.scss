@@ -92,6 +92,11 @@ $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.2);
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        li{
+            text-align: justify;
+            margin-top: 10px;
+        }
+
         .visi{
             h3{
                 font-size: 20px;

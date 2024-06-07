@@ -114,7 +114,7 @@ const aboutplate = `
         <div class="agtdev">
             <img src="https://media.licdn.com/dms/image/D5603AQGMWo0zwQWcVA/profile-displayphoto-shrink_800_800/0/1716131386812?e=1723075200&v=beta&t=iRGUoKpb8y539Puobli83XA386qdHXLxgpO_C0CtgBY" alt="Profil Yohan Permana">
             <h3>Yohan Permana</h3>
-            <p>Fullstack Web Dev</p>
+            <p>Fullstack Web Dev & Project lead</p>
             
             <section class="github">
                 <img src="./images/logogithub.png" alt="Github">
@@ -153,15 +153,17 @@ const aboutplate = `
         <div class="visi">
             <h3>Visi</h3>
             <ul>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+                <li>
+                Menjadi pusat informasi terdepan yang mempromosikan keunikan kuliner Madura serta mendukung perkembangan UMKM lokal, dengan tujuan menjadikan Madura sebagai destinasi wisata kuliner utama yang mendunia.
+                </li>
             </ul>
         </div>
         <div class="misi">
             <h3>Misi</h3>
             <ul>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+                <li>Memperkenalkan dan mempromosikan wisata kuliner khas Madura kepada wisatawan domestik dan internasional.</li>
+                <li>Menyajikan informasi lengkap dan akurat mengenai tempat-tempat kuliner terbaik di Madura.</li>
+                <li>Menciptakan konten yang menarik dan informatif, termasuk ulasan, rekomendasi</li>
             </ul>
         </div>
     </div>

@@ -92,12 +92,12 @@ $shadowbox3: 0px 0px 4px 3px rgba(146, 146, 146, 0.137);
             #searchInput{
                 padding: 6px;
                 font-family: "Poppins", sans-serif;
-                width: 30%;
+                width: 90%;
                 border-radius: 6px;
                 min-width: 200px;
                 font-size: 14px;
                 border: none;
-                background-color: $bva;
+                padding-left: 30px;
                 box-shadow: $shadowbox;
             }
         }
