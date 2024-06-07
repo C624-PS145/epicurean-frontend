@@ -98,7 +98,7 @@ const aboutmadura = `
         </div>
     </section>
     <figure>
-        <img src="./images/image.png" alt="gambar madura">
+        <img src="./images/bannermadura.jpg" alt="gambar madura">
     </figure>
     </div>
 </article>`;
@@ -112,34 +112,34 @@ const aboutplate = `
     <div class="developer-container">
 
         <div class="agtdev">
-            <img src="./images/yohan.jpg" alt="Profil Yohan Permana">
+            <img src="https://media.licdn.com/dms/image/D5603AQGMWo0zwQWcVA/profile-displayphoto-shrink_800_800/0/1716131386812?e=1723075200&v=beta&t=iRGUoKpb8y539Puobli83XA386qdHXLxgpO_C0CtgBY" alt="Profil Yohan Permana">
             <h3>Yohan Permana</h3>
-            <p>Front-End 1 Web Dev</p>
+            <p>Fullstack Web Dev</p>
             
             <section class="github">
-                <img src="./images/github.png" alt="Github">
+                <img src="./images/logogithub.png" alt="Github">
                 <p>YohanpermanaRepository</p>
             </section>
         </div>
 
         <div  class="agtdev">
-            <img src="./images/jahfal.jpg" alt="Profil Jahfal Azzuhri Subroto">
+            <img src="https://media.licdn.com/dms/image/D4D03AQHcYzAiTKlb7w/profile-displayphoto-shrink_800_800/0/1699278430134?e=1723075200&v=beta&t=RR71DAbAMVhPJqn8kXZ7Wr6HCZDaoXU-qyvaXsBvgf8" alt="Profil Jahfal Azzuhri Subroto">
             <h3>Jahfal Azzuhri S</h3>
-            <p>Front-End 2 Web Dev</p>
+            <p>Front-End Web Dev</p>
             
             <section class="github">
-            <img src="./images/github.png" alt="Github">
+            <img src="./images/logogithub.png" alt="Github">
                 <p>jahfal1987</p>
             </section>
         </div>
 
         <div  class="agtdev">
-            <img src="./images/hikmal.jpg" alt="Profil M Nur Hikmal A">
+            <img src="https://media.licdn.com/dms/image/D4E03AQGsiVRz6JQBQQ/profile-displayphoto-shrink_800_800/0/1676932052722?e=1723075200&v=beta&t=qWyhKtrxxd_MRaCORUi39D10AIZcJMATvffq5pWrUz0" alt="Profil M Nur Hikmal A">
             <h3>M Nur Hikmal A</h3>
             <p>Back End Web Dev</p>
 
             <section class="github">
-            <img src="./images/github.png" alt="Github">
+            <img src="./images/logogithub.png" alt="Github">
                 <p>HikmalRepository</p>
             </section>
         </div>
@@ -188,7 +188,7 @@ const detailplate = (detail) => `
         <section class="pemesanan">
             <p>informasi pemesanan (Whatsapp)</p>
             <a href="https://api.whatsapp.com/send?phone=62${detail.link_wa}">
-            <img src="../images/whatsapp.png" alt="WhatsApp">
+            <img src="../images/logowhatsapp.png" alt="WhatsApp">
             </a>
             <p>Jam operasional : ${detail.jam_operasional}</p>
             <p>Lokasi Google Maps :</p>
