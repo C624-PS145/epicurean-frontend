@@ -1,0 +1,34 @@
+$bgs: #F6FCF9;
+$txt: #353535;
+$pc: #24AB70;
+$txt2:#000000;
+$w:#ffff;
+$bgl:#FAFAFA;
+$jlt : #222222;
+$ds: #555555;
+$bva:#E9F7F1;
+$shadowbox: 0 4px 3px rgba(0, 0, 0, 0.075);
+$shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
+
+.zonaartikel{
+    .label{
+        justify-content: center;
+        margin-top: 35px;
+
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                color: $pc;
+                font-size: 40px;
+            }
+            p{
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    
+    }
+
+}

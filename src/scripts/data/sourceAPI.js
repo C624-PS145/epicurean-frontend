@@ -47,6 +47,39 @@ class EpicureanApiSource {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async createArtikel(formData) {
+    try {
+      const response = await fetch(API_ENDPOINT.ARTIKEL, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+
+      const responseJson = await response.json();
+      return responseJson;
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+      throw error;
+    }
+  }
+
+  static async listAllArtikel() {
+    try {
+      const response = await fetch(API_ENDPOINT.ALL_ARTIKEL);
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      const responseJson = await response.json();
+      return responseJson;
+    } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+      throw error;
+    }
+  }
 }
 
 export default EpicureanApiSource;

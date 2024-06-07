@@ -92,17 +92,19 @@ const aboutmadura = `
             kelezatan dari pulau yang penuh pesona ini!.
         </p>
         <div>
-            <h3>Alexandr Ivchenko</h3>
-            <p>National  Epicurean</p>
+            <div class="writer">
+            <p>Writer</p>
+            <h3>Tim Epicurean</h3>
+            </div>
+            <p>Klik <a href="#/pageartikel">  disini  </a> untuk Akses zona informasi seputar madura</p>
+        
         </div>
     </section>
     <figure>
         <img src="./images/image.png" alt="gambar madura">
     </figure>
     </div>
-</article>
-
-`;
+</article>`;
 
 const aboutplate = `
 
@@ -293,6 +295,17 @@ const templateunlikebutton = () => `
   </button>
 `;
 
+const createArtikelTemplate = (artikel) => `
+<article class="artikel-item">
+  <img src="${artikel.gambar_artikel}" alt="${artikel.judul}">
+  <div class="artikel-details">
+    <h3>${artikel.judul}</h3>
+    <p><strong>Author:</strong> ${artikel.penulis}</p>
+    <p><strong>Description:</strong> ${artikel.deskripsi}</p>
+    <p><strong>Content:</strong> ${artikel.isi}</p>
+  </div>
+</article>`;
+
 export {
   daftarpopuler,
   daftartestimoni,
@@ -304,4 +317,5 @@ export {
   templatelikebutton,
   templateunlikebutton,
   daftarfavorit,
+  createArtikelTemplate,
 };

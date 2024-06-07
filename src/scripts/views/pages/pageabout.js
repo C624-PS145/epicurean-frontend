@@ -5,17 +5,14 @@ const About = {
     return `
     <div class="toggleback">
          <a id="back-button" href="#"><i class="gg-arrow-left-o"></i>Kembali</a>
-      </div>
+    </div>
 
     <div class="abouters" id ="abouters">
-
     <div class="label">
         <section>
             <h2>About</h2>
         </section>
     </div>
-    
-    
     </div>
     `;
   },

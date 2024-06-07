@@ -2,6 +2,9 @@ import CONFIG from './config';
 
 const API_ENDPOINT = {
 
+  ARTIKEL: `${CONFIG.BASE_URL}artikel`,
+  ALL_ARTIKEL: `${CONFIG.BASE_URL}artikel`,
+
   LIST_ALL: `${CONFIG.BASE_URL}listallwisatakuliner`,
   POPULER: `${CONFIG.BASE_URL}populer`,
   BEST_REVIEW: `${CONFIG.BASE_URL}bestreview`,

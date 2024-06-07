@@ -5,6 +5,7 @@ import '../styles/footer.scss';
 import '../styles/about.scss';
 import '../styles/detail.scss';
 import '../styles/bookmark.scss';
+import '../styles/artikel.scss';
 // eslint-disable-next-line import/extensions
 import App from './views/app';
 // import swRegister from './utils/sw-register';
