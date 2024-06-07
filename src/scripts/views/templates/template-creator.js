@@ -4,7 +4,7 @@ const { formatDistanceToNow } = require('date-fns');
 
 const daftarpopuler = (populer) => `
 <article>
-  <img src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
+  <img class="lazyload" src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
   <p class="lok">${populer.kabupaten}</p>
   <h3><a href="#/detail/${populer.id}">${populer.nama_tempat}</a></h3>
   <p>${populer.jam_operasional} <span>${createStars(populer.rating_avg)}</span>${populer.rating_avg}</p>
@@ -22,7 +22,7 @@ const daftarfavorit = (wisata) => `
     <button class="remove-button"><i class="gg-close-r"></i></button>
     <button class="detail-button" data-id="${wisata.id}"><i class="gg-arrow-top-right-r"></i></button>
   </div>
-  <img src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
+  <img class="lazyload" src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
   <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
   <p class="lok">${wisata.kabupaten}</p>
   <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span></p>
@@ -34,7 +34,7 @@ const daftarfavorit = (wisata) => `
 const daftartestimoni = (testimoni) => `
 <article>
     <p class="tgltesti">${formatDistanceToNow(new Date(testimoni.tanggal), { addSuffix: true })}<p>
-  <img src="${testimoni.gambar_katalog}" alt="gambar wisata kuliner">
+  <img class="lazyload" src="${testimoni.gambar_katalog}" alt="gambar wisata kuliner">
   <h3><a href="#/detail/${testimoni.wisata_kuliner_id}">${testimoni.nama_tempat}</a></h3>
   <p><span>${createStars(testimoni.rating)}</span></p>
   <section>
@@ -61,7 +61,7 @@ const searchkuliner = () => `
 
 const allkuliner = (searchfilter) => `
   <article>
-    <img src="${searchfilter.gambar_katalog}">
+    <img class="lazyload" src="${searchfilter.gambar_katalog}">
     <p class="lok">${searchfilter.kabupaten}</p>
     <h3><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
     <p>${searchfilter.jam_operasional} <span>${createStars(searchfilter.rating_avg)}</span>${searchfilter.rating_avg}</p>
@@ -98,7 +98,7 @@ const aboutmadura = `
         </div>
     </section>
     <figure>
-        <img src="./images/bannermadura.jpg" alt="gambar madura">
+        <img class="lazyload" src="./images/bannermadura.jpg" alt="gambar madura">
     </figure>
     </div>
 </article>`;
@@ -112,18 +112,18 @@ const aboutplate = `
     <div class="developer-container">
 
         <div class="agtdev">
-            <img src="https://media.licdn.com/dms/image/D5603AQGMWo0zwQWcVA/profile-displayphoto-shrink_800_800/0/1716131386812?e=1723075200&v=beta&t=iRGUoKpb8y539Puobli83XA386qdHXLxgpO_C0CtgBY" alt="Profil Yohan Permana">
+            <img class="lazyload" src="https://media.licdn.com/dms/image/D5603AQGMWo0zwQWcVA/profile-displayphoto-shrink_800_800/0/1716131386812?e=1723075200&v=beta&t=iRGUoKpb8y539Puobli83XA386qdHXLxgpO_C0CtgBY" alt="Profil Yohan Permana">
             <h3>Yohan Permana</h3>
             <p>Fullstack Web Dev & Project lead</p>
             
             <section class="github">
-                <img src="./images/logogithub.png" alt="Github">
+                <img class="lazyload" src="./images/logogithub.png" alt="Github">
                 <p>YohanpermanaRepository</p>
             </section>
         </div>
 
         <div  class="agtdev">
-            <img src="https://media.licdn.com/dms/image/D4D03AQHcYzAiTKlb7w/profile-displayphoto-shrink_800_800/0/1699278430134?e=1723075200&v=beta&t=RR71DAbAMVhPJqn8kXZ7Wr6HCZDaoXU-qyvaXsBvgf8" alt="Profil Jahfal Azzuhri Subroto">
+            <img class="lazyload" src="https://media.licdn.com/dms/image/D4D03AQHcYzAiTKlb7w/profile-displayphoto-shrink_800_800/0/1699278430134?e=1723075200&v=beta&t=RR71DAbAMVhPJqn8kXZ7Wr6HCZDaoXU-qyvaXsBvgf8" alt="Profil Jahfal Azzuhri Subroto">
             <h3>Jahfal Azzuhri S</h3>
             <p>Front-End Web Dev</p>
             
@@ -134,7 +134,7 @@ const aboutplate = `
         </div>
 
         <div  class="agtdev">
-            <img src="https://media.licdn.com/dms/image/D4E03AQGsiVRz6JQBQQ/profile-displayphoto-shrink_800_800/0/1676932052722?e=1723075200&v=beta&t=qWyhKtrxxd_MRaCORUi39D10AIZcJMATvffq5pWrUz0" alt="Profil M Nur Hikmal A">
+            <img class="lazyload" src="https://media.licdn.com/dms/image/D4E03AQGsiVRz6JQBQQ/profile-displayphoto-shrink_800_800/0/1676932052722?e=1723075200&v=beta&t=qWyhKtrxxd_MRaCORUi39D10AIZcJMATvffq5pWrUz0" alt="Profil M Nur Hikmal A">
             <h3>M Nur Hikmal A</h3>
             <p>Back End Web Dev</p>
 
@@ -176,7 +176,7 @@ const detailplate = (detail) => `
 <section class="informasidangambar">
 
     <div class="detailgambar-kontainer">
-      <img src="${detail.gambar_katalog}" alt="gambar wisata kuliner">
+      <img class="lazyload" src="${detail.gambar_katalog}" alt="gambar wisata kuliner">
     </div>
 
     <div>
@@ -190,7 +190,7 @@ const detailplate = (detail) => `
         <section class="pemesanan">
             <p>informasi pemesanan (Whatsapp)</p>
             <a href="https://api.whatsapp.com/send?phone=62${detail.link_wa}">
-            <img src="../images/logowhatsapp.png" alt="WhatsApp">
+            <img class="lazyload" src="../images/logowhatsapp.png" alt="WhatsApp">
             </a>
             <p>Jam operasional : ${detail.jam_operasional}</p>
             <p>Lokasi Google Maps :</p>
@@ -221,10 +221,10 @@ const detailplate = (detail) => `
 <section class="galeri">
 <h2>Galeri</h2>
     <ul>
-        <li><img src="${detail.galeri1}" alt="galeri1"></li>
-        <li><img src="${detail.galeri2}" alt="galeri2"></li>
-        <li><img src="${detail.galeri3}" alt="galeri3"></li>
-        <li><img src="${detail.galeri4}" alt="galeri4"></li>
+        <li><img class="lazyload" src="${detail.galeri1}" alt="galeri1"></li>
+        <li><img class="lazyload" src="${detail.galeri2}" alt="galeri2"></li>
+        <li><img class="lazyload" src="${detail.galeri3}" alt="galeri3"></li>
+        <li><img class="lazyload" src="${detail.galeri4}" alt="galeri4"></li>
     </ul>
 </section>
 
@@ -292,7 +292,7 @@ const templateunlikebutton = () => `
 const createArtikelTemplate = (artikel) => `
 <article class="artikel-item">
   <h3>${artikel.judul}</h3>
-  <img src="${artikel.gambar_artikel}" alt="${artikel.judul}">
+  <img class="lazyload" src="${artikel.gambar_artikel}" alt="${artikel.judul}">
   <div class="artikel-details">
     <p class="auth"><strong>Published by:</strong> ${artikel.penulis}</p>
     <p><strong>Description:</strong> ${artikel.deskripsi}</p>

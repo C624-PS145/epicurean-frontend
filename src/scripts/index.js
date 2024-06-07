@@ -12,6 +12,9 @@ import swRegister from './utils/sw-register';
 // eslint-disable-next-line import/extensions
 import './component/jumbotron.js';
 
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+
 const app = new App({
   button: document.querySelector('#menuToggle'),
   drawer: document.querySelector('#drawer-navigasi'),
