@@ -8,9 +8,7 @@ const PageArtikel = {
     <div class="toggleback">
          <a id="back-button" href="#"><i class="gg-arrow-left-o"></i>Kembali</a>
     </div>
-
     <div class="zonaartikel">
-
       <div class="label">
         <section>
           <h2>Madura Information Zone</h2>

@@ -21,7 +21,6 @@ class Jumbotron extends HTMLElement {
   }
 
   addAnimations() {
-    // Animate the h1 element
     const h1 = this.querySelector('h1');
     const span = this.querySelector('span');
     const p = this.querySelector('p');

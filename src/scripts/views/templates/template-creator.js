@@ -8,29 +8,28 @@ const daftarpopuler = (populer) => `
   <p class="lok">${populer.kabupaten}</p>
   <h3><a href="#/detail/${populer.id}">${populer.nama_tempat}</a></h3>
   <p>${populer.jam_operasional} <span>${createStars(populer.rating_avg)}</span>${populer.rating_avg}</p>
-
   <section>
-  <p>${populer.deskripsi}</p>
-  <div>
-    <button class="detail-button" data-id="${populer.id}">Detail<span><i class="gg-arrow-right"></i></span></button>
-  </div> 
-</section> 
+    <p>${populer.deskripsi}</p>
+    <div>
+      <button class="detail-button" data-id="${populer.id}">Detail<span><i class="gg-arrow-right"></i></span></button>
+    </div> 
+  </section> 
 </article>`;
 
 const daftarfavorit = (wisata) => `
-  <article>
-    <div class="perbutonan">
-      <button class="remove-button"><i class="gg-close-r"></i></button>
-      <button class="detail-button" data-id="${wisata.id}"><i class="gg-arrow-top-right-r"></i></button>
-    </div>
-    <img src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
-    <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
-    <p class="lok">${wisata.kabupaten}</p>
-    <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span></p>
-    <section>
-      <p>${wisata.deskripsi}</p>
-    </section> 
-  </article>`;
+<article>
+  <div class="perbutonan">
+    <button class="remove-button"><i class="gg-close-r"></i></button>
+    <button class="detail-button" data-id="${wisata.id}"><i class="gg-arrow-top-right-r"></i></button>
+  </div>
+  <img src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
+  <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
+  <p class="lok">${wisata.kabupaten}</p>
+  <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span></p>
+  <section>
+  <p>${wisata.deskripsi}</p>
+  </section> 
+</article>`;
 
 const daftartestimoni = (testimoni) => `
 <article>
@@ -41,7 +40,6 @@ const daftartestimoni = (testimoni) => `
   <section>
     <h4>${testimoni.nama_pengulas}</h4>
     <p>${testimoni.ulasan}</p>
-    
   </section> 
 </article>`;
 
@@ -196,11 +194,8 @@ const detailplate = (detail) => `
             <p>Lokasi Google Maps :</p>
             <iframe src="${detail.link_maps}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
-
     </div>
-
 </section>
-
 <section class="daftar-menu">
     <h2>Daftar Menu</h2>
     <div class="makan-minum">
@@ -213,9 +208,7 @@ const detailplate = (detail) => `
           <ul>${detail.drinks.map((drink) => `<li tabindex="0">${drink.nama_minuman} <span> - Rp ${drink.harga} </span></li>`).join('')}</ul>         
       </div>
     </div>
-
 </section>
-
 <section class="fasilitas">
 <h2>Fasilitas</h2>
     <ul>

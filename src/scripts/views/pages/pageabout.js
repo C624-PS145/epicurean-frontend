@@ -4,21 +4,19 @@ const About = {
   async render() {
     return `
     <div class="toggleback">
-         <a id="back-button" href="#"><i class="gg-arrow-left-o"></i>Kembali</a>
+      <a id="back-button" href="#"><i class="gg-arrow-left-o"></i>Kembali</a>
     </div>
-
     <div class="abouters" id ="abouters">
-    <div class="label">
+      <div class="label">
         <section>
-            <h2>About</h2>
+        <h2>About</h2>
         </section>
-    </div>
+      </div>
     </div>
     `;
   },
 
   async afterRender() {
-    // Menambahkan event listener pada tombol kembali
     const backButton = document.getElementById('back-button');
     backButton.addEventListener('click', () => {
       history.back();
