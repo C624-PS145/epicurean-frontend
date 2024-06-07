@@ -32,6 +32,9 @@ footer a {
     text-decoration: none;
     color: #090909;
     font-size: 15px;
+    &:hover {
+        color: #24AB70; 
+    }
 }
 
 footer .company-name h2{

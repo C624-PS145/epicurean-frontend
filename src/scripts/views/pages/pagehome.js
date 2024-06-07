@@ -44,6 +44,12 @@ const Home = {
     const viewAllButton = document.querySelector('#viewAllButton');
     viewAllButton.addEventListener('click', () => {
       window.location.hash = '#/pagekuliner';
+      window.scrollTo(0, 0);
+    });
+    const buttonarticle = document.querySelector('#bartic');
+    buttonarticle.addEventListener('click', () => {
+      window.scrollTo(0, 0);
+      window.location.hash = '#/pageartikel';
     });
 
     try {

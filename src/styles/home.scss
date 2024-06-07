@@ -26,6 +26,9 @@ html {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    button{
+      cursor: pointer;
+    }
   }
   .skiper {
     position: absolute;
@@ -119,7 +122,7 @@ html {
       button{
         padding: 10px;
         border-radius: 10px;
-        width: 165px;
+        width: 145px;
         height: 50px;
         background-color: $pc;
         color: $w;
@@ -403,19 +406,25 @@ html {
             color: $ds;
             text-align: justify;
 
-            a{
+            button{
+              background-color: none;
+              font-size: 17px;
+              border: none;
+              padding: 5px;
+              background-color: rgba(0, 0, 0, 0);
               color: $pc;
-              font-weight: 500;
-              &:hover {
-                color: $jlt;
+              font-weight: 600;
+             
+
+              &:hover{
+                background-color: $bva;
               }
             }
            
           }
           .writer{
-            margin-top: 10px;
-            margin-bottom: 20px;
-            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 30px;
           }
       
           h3{

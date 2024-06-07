@@ -9,26 +9,143 @@ $ds: #555555;
 $bva:#E9F7F1;
 $shadowbox: 0 4px 3px rgba(0, 0, 0, 0.075);
 $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
+$shadowbox3: 0px 0px 4px 3px rgba(146, 146, 146, 0.137);
+
 
 .zonaartikel{
+
+   
     .label{
         justify-content: center;
         margin-top: 35px;
+        text-align: center;
 
         section{
             display: flex;
             flex-direction: column;
-            align-items: center;
+
             h2{
                 color: $pc;
                 font-size: 40px;
             }
             p{
                 font-size: 14px;
-                text-align: center;
             }
         }
     
     }
 
+    .kontenartikel{
+        
+        .formulir{
+            margin-top: 20%;
+            h3{
+                color: $pc;
+                font-size: 20px;
+            }
+            p{
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            form{
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+
+                input{
+                    border-radius: 5px;
+                    padding: 5px;
+                    margin-top: 10px;
+                    font-family: "Poppins", sans-serif;
+               
+                }
+                textarea{
+                    margin-top: 10px;
+                    padding: 10px;
+                    font-family: "Poppins", sans-serif;
+                    border-radius: 6px;
+                    
+                }
+                button{
+                    margin-top: 20px;
+                    padding: 7px;
+                    max-width: 130px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: $pc;
+                    color: white;
+                    font-size: 14px;
+
+                    &:hover{
+                        background-color: #000000;
+                        
+                    }
+                }
+            }
+        }
+        .searchart{
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            
+
+            #searchInput{
+                padding: 6px;
+                font-family: "Poppins", sans-serif;
+                width: 30%;
+                border-radius: 6px;
+                min-width: 200px;
+                font-size: 14px;
+                border: none;
+                background-color: $bva;
+                box-shadow: $shadowbox;
+            }
+        }
+
+        #articlesList{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+
+    
+            .artikel-item{
+                box-shadow: $shadowbox3;
+                max-width: 700px;
+                padding: 25px;
+                h3{
+                    font-size: 24px;
+                    word-break: break-all;
+                    margin-bottom: 20px;
+                    color: $txt;
+                    padding: 5px;
+
+                }
+
+                img{
+                    max-width: 700px;
+                    width: 100%;
+                    border-radius: 6px;
+                    
+                }
+                p{
+                    word-break: break-all;
+                    text-align: justify;
+                    margin-top: 6px;
+                    strong{
+                        font-weight: 600;
+                    }
+                    padding: 15px;
+                }
+                .auth{
+                    font-size: 14px;
+
+                    strong{
+                        color: #000000b2;
+
+                    }
+                }
+            }
+        }
+    }
 }

@@ -86,18 +86,17 @@ const aboutmadura = `
 <article>
     <div>
     <section>
-        <p>Dari sisi kuliner, Madura adalah surga bagi pecinta makanan. 
-            Dengan kekayaan bahan-bahan alami dan rempah-rempah, setiap hidangan Madura menghadirkan kelezatan yang tidak terlupakan. Dari sate kambing Madura yang terkenal hingga bebek panggang dan sop ikan, setiap gigitan adalah 
-            sebuah petualangan kuliner yang memanjakan lidah Anda dengan citarasa yang otentik dan memikat hati siapa pun yang mencicipinya. Selamat menelusuri
-            kelezatan dari pulau yang penuh pesona ini!.
+        <p>
+        Madura, sebuah pulau yang memukau di lepas pantai Jawa Timur, terkenal dengan keanekaragaman budayanya dan panorama alam yang menakjubkan. Dengan pesona pantainya yang memikat, tradisi yang kaya, dan keramahan penduduknya, Madura menjadi destinasi yang tak boleh dilewatkan bagi para penikmat wisata dan kuliner.
+
+         Temukan lebih banyak tentang keindahan dan keunikan pulau Madura melalui artikel-artikel informatif
         </p>
         <div>
             <div class="writer">
             <p>Writer</p>
             <h3>Tim Epicurean</h3>
             </div>
-            <p>Klik <a href="#/pageartikel">  disini  </a> untuk Akses zona informasi seputar madura</p>
-        
+            <p>Klik <button id="bartic">Disini</button>  untuk Akses zona informasi wisata seputar madura </p>
         </div>
     </section>
     <figure>
@@ -297,10 +296,10 @@ const templateunlikebutton = () => `
 
 const createArtikelTemplate = (artikel) => `
 <article class="artikel-item">
+  <h3>${artikel.judul}</h3>
   <img src="${artikel.gambar_artikel}" alt="${artikel.judul}">
   <div class="artikel-details">
-    <h3>${artikel.judul}</h3>
-    <p><strong>Author:</strong> ${artikel.penulis}</p>
+    <p class="auth"><strong>Published by:</strong> ${artikel.penulis}</p>
     <p><strong>Description:</strong> ${artikel.deskripsi}</p>
     <p><strong>Content:</strong> ${artikel.isi}</p>
   </div>
