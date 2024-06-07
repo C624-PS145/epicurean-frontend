@@ -2,6 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 // module export dan plugins
 module.exports = {
   entry: {
@@ -50,15 +53,37 @@ module.exports = {
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
+      maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       runtimeCaching: [
         {
           urlPattern: ({ url }) => url.href.startsWith('http://localhost:3000/api/'),
           handler: 'StaleWhileRevalidate',
           options: {
-            cacheName: 'restoapicache',
+            cacheName: 'epicurieancache',
           },
         },
       ],
     }),
+    // optimasi gambar
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: {
+            quality: 50,
+          },
+        },
+      ],
+      overrideExtension: true,
+    }),
+
   ],
 };
