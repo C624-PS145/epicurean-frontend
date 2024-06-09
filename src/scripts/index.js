@@ -34,7 +34,7 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
   setTimeout(() => {
     smoothScrollToElement(window.location.hash);
-  }, 100); 
+  }, 100);
 });
 
 window.addEventListener('load', async () => {
