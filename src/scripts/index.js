@@ -8,7 +8,7 @@ import '../styles/bookmark.scss';
 import '../styles/artikel.scss';
 // eslint-disable-next-line import/extensions
 import App from './views/app';
-// import swRegister from './utils/sw-register';
+import swRegister from './utils/sw-register';
 // eslint-disable-next-line import/extensions
 import './component/jumbotron.js';
 
@@ -39,6 +39,6 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', async () => {
   await app.renderPage();
-  // await swRegister();
+  await swRegister();
   smoothScrollToElement(window.location.hash);
 });
