@@ -45,20 +45,13 @@ const daftartestimoni = (testimoni) => `
 
 const searchkuliner = () => `
   <form id="searchForm">
-  <input type="text" id="namaTempat" name="namaTempat" placeholder="Search wisata kuliner">
-    <div>
-    <select id="kabupaten" name="kabupaten">
-    <option value="">No Filter</option>
-    <option value="Bangkalan">Bangkalan</option>
-    <option value="Sampang">Sampang</option>
-    <option value="Sumenep">Sumenep</option>
-    <option value="Pamekasan">Pamekasan</option>
-    </select>
-    <button type="submit">⌕</button>
-    </div>
+    <input type="text" id="namaTempat" placeholder="Cari nama tempat">
+    <input type="text" id="kabupaten" placeholder="Kabupaten">
+    <input type="number" id="avgRating" placeholder="Rating minimal" step="0.1" min="0" max="5">
+    <input type="text" id="makanan" placeholder="Makanan">
+    <button type="submit">Cari</button>
   </form>
 `;
-
 const allkuliner = (searchfilter) => `
   <article>
     <img class="lazyload" src="${searchfilter.gambar_katalog}">

@@ -40,9 +40,12 @@ const Pagekuliner = {
 
       const namaTempat = document.getElementById('namaTempat').value;
       const kabupaten = document.getElementById('kabupaten').value;
+      const avgRating = document.getElementById('avgRating').value;
+      const makanan = document.getElementById('makanan').value;
 
       try {
-        const searchResults = await EpicureanApiSource.searchkuliner(namaTempat, kabupaten);
+        // eslint-disable-next-line max-len
+        const searchResults = await EpicureanApiSource.searchkuliner(namaTempat, kabupaten, avgRating, makanan);
         if (searchResults.length > 0) {
           searchResults.forEach((result) => {
             allkulinerContainer.innerHTML += allkuliner(result);

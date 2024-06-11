@@ -48,43 +48,21 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
           width: 100%;
           font-size: 12px;
         }
-  
-        div{
-          display: flex;
-
-          button{
-            background: none;
-            border: none;
-            font-size: 34px;
-            cursor: pointer;
-            margin-left: 10px;
-            height: 35px;
-            max-width: 40px;
-             
-            &:hover {
-              transform: scale(1.10);
-            }
-          }
-          
-          select{
-            max-width: 100px;
-            cursor: pointer;
-            border: none;
-            height: 35px;
-            background-color: $bgs;
-            border-radius: 10px;
-            align-items: center;
-            font-family:"Poppins", sans-serif;
-            text-align: center;
-            box-shadow: $shadowbox;
-            font-size: 12px;
-            
-  
+        button{
+          background-color: $bgs;
+          padding: 5px;
+          border: none;
+          font-family:"Poppins", sans-serif;
+          text-align: center;
+          border-radius: 5px;
+          box-shadow: $shadowbox;
+          color:$txt;
+          &:hover{
+            background-color: $pc;
+            color: white;
           }
         }
-
       }
-      
     }
 
     .list-item{

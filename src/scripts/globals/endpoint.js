@@ -9,10 +9,12 @@ const API_ENDPOINT = {
   POPULER: `${CONFIG.BASE_URL}populer`,
   BEST_REVIEW: `${CONFIG.BASE_URL}bestreview`,
   GET_DETAIL_BYID: (id) => `${CONFIG.BASE_URL}detailwisatakuliner/${id}`,
-  SEARCH_FILTER: (query, kabupaten) => {
+  SEARCH_FILTER: (query, kabupaten, avgRating, makanan) => {
     let url = `${CONFIG.BASE_URL}search?`;
     if (query) url += `nama_tempat=${query}`;
     if (kabupaten) url += `&kabupaten=${kabupaten}`;
+    if (avgRating) url += `&avg_rating=${avgRating}`;
+    if (makanan) url += `&makanan=${makanan}`;
     return url;
   },
   CREATE_REVIEW: (id) => `${CONFIG.BASE_URL}detailwisatakuliner/${id}/ulasan`,
