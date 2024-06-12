@@ -56,7 +56,7 @@ module.exports = {
       maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       runtimeCaching: [
         {
-          urlPattern: ({ url }) => url.href.startsWith('http://localhost:3000/api/'),
+          urlPattern: ({ url }) => url.href.startsWith('https://epicurean-backend-umber.vercel.app/api/'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'epicurieancache',
