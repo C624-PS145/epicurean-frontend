@@ -24,11 +24,12 @@ const Favorites = {
     const wisata = await FavoriteWisataIdb.getallfavrest();
 
     if (wisata.length === 0) {
-      wisataListContainer.innerHTML = '<p>Tidak ada wisata kuliner yang disukai.</p>';
+      wisataListContainer.innerHTML = '<div class="kuliner-item_not_found"><p>Tidak ada wisata kuliner yang disukai.</p></div>';
     } else {
       wisata.forEach((item) => {
         const wisataElement = document.createElement('div');
         wisataElement.innerHTML = daftarfavorit(item);
+        wisataElement.classList.add('kuliner_item');
 
         // Add event listener for remove button
         wisataElement.querySelector('.remove-button').addEventListener('click', async () => {

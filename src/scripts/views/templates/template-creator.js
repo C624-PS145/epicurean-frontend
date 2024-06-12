@@ -6,7 +6,7 @@ const daftarpopuler = (populer) => `
 <article>
   <img class="lazyload" src="${populer.gambar_katalog}" alt="gambar wisata kuliner">
   <p class="lok">${populer.kabupaten}</p>
-  <h3><a href="#/detail/${populer.id}">${populer.nama_tempat}</a></h3>
+  <h3 class="kuliner_title"><a href="#/detail/${populer.id}">${populer.nama_tempat}</a></h3>
   <p>${populer.jam_operasional} <span>${createStars(populer.rating_avg)}</span>${populer.rating_avg}</p>
   <section>
     <p>${populer.deskripsi}</p>
@@ -23,19 +23,19 @@ const daftarfavorit = (wisata) => `
     <button class="detail-button" data-id="${wisata.id}"><i class="gg-arrow-top-right-r"></i></button>
   </div>
   <img class="lazyload" src="${wisata.gambar_katalog}" alt="gambar wisata kuliner">
-  <h3><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
+  <h3 class="kuliner_title"><a href="#/detail/${wisata.id}">${wisata.nama_tempat}</a></h3>
   <p class="lok">${wisata.kabupaten}</p>
   <p>${wisata.jam_operasional} <span>${createStars(wisata.rating_avg)}</span></p>
   <section>
   <p>${wisata.deskripsi}</p>
-  </section> 
+  </section>
 </article>`;
 
 const daftartestimoni = (testimoni) => `
 <article>
     <p class="tgltesti">${formatDistanceToNow(new Date(testimoni.tanggal), { addSuffix: true })}<p>
   <img class="lazyload" src="${testimoni.gambar_katalog}" alt="gambar wisata kuliner">
-  <h3><a href="#/detail/${testimoni.wisata_kuliner_id}">${testimoni.nama_tempat}</a></h3>
+  <h3 class="kuliner_title"><a href="#/detail/${testimoni.wisata_kuliner_id}">${testimoni.nama_tempat}</a></h3>
   <p><span>${createStars(testimoni.rating)}</span></p>
   <section>
     <h4>${testimoni.nama_pengulas}</h4>
@@ -53,10 +53,10 @@ const searchkuliner = () => `
   </form>
 `;
 const allkuliner = (searchfilter) => `
-  <article>
+  <article class="kuliner_item">
     <img class="lazyload" src="${searchfilter.gambar_katalog}">
     <p class="lok">${searchfilter.kabupaten}</p>
-    <h3><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
+    <h3 class="kuliner_title"><a href="#/detail/${searchfilter.id}">${searchfilter.nama_tempat}</a></h3>
     <p>${searchfilter.jam_operasional} <span>${createStars(searchfilter.rating_avg)}</span>${searchfilter.rating_avg}</p>
     <section>
       <p>${searchfilter.deskripsi}</p>
