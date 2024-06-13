@@ -31,8 +31,12 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
     }
 
     .searchkuliner{
+      align-items: center;
       form{
         display: flex;
+        gap: 5px;
+        align-items: center;
+
         justify-content: center;
         input{
           box-shadow: $shadowbox;
@@ -42,21 +46,22 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
           border-radius: 10px;
           font-family:"Poppins", sans-serif;
           text-align: center;
-          margin-right: 10px;
-          margin-left: 10px;
           max-width: 400px;
           width: 100%;
           font-size: 12px;
         }
         button{
+          max-width: 400px;
+          height: 35px;
           background-color: $bgs;
           padding: 5px;
           border: none;
           font-family:"Poppins", sans-serif;
           text-align: center;
-          border-radius: 5px;
+          border-radius: 10px;
           box-shadow: $shadowbox;
           color:$txt;
+          min-width: 100px;
           &:hover{
             background-color: $pc;
             color: white;
@@ -186,13 +191,9 @@ $shadowbox2: 0 4px 3px rgba(146, 146, 146, 0.2);
 
   .searchkuliner{
     form{
-      margin-right: 50px;
       flex-direction: column;
       input{
         margin-bottom: 30px;
-      }
-      div{
-        margin-left: 10px;
       }
     }
   }
